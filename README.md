@@ -2,7 +2,7 @@
 
 A standalone, framework or testmethod agnostic testing environment running in the browser.
 
-The bech makes no assumptions of what kind of data you are collecting, which libraries you are using or how you detect if the test failed or not.
+The jestBench makes no assumptions of what kind of data you are collecting, which libraries you are using or how you detect if the test failed or not.
 
 JestBench is basicly a wrapper for anything that can be run inside IFRAME in your browser.
 
