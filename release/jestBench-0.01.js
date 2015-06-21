@@ -1468,6 +1468,27 @@ var jestBench_prototype = function() {
 
       return iframe;
     }
+    _myTrait_.getDbResults = function(databaseName, callBackFn) {
+      var db = _localDB(databaseName, {
+        tables: {
+          sessions: {
+            createOptions: {
+              autoIncrement: true
+            }
+          }
+        }
+
+      });
+      db.then(function() {
+
+        db.table("sessions").getAll().then(function(res) {
+          callBackFn(res);
+        })
+          .fail(function() {
+            callBackFn(null);
+          });
+      })
+    }
     if (_myTrait_.__traitInit && !_myTrait_.hasOwnProperty("__traitInit"))
       _myTrait_.__traitInit = _myTrait_.__traitInit.slice();
     if (!_myTrait_.__traitInit) _myTrait_.__traitInit = []
