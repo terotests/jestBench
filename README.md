@@ -1,4 +1,4 @@
-# JestBench
+# jestBench
 
 A standalone, framework or testmethod agnostic testing environment running in the browser.
 
