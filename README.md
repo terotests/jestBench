@@ -23,7 +23,6 @@ var options = {
             "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
         ],
         scripts : [
-            "/static/_e-0.33.js?v=44",
             "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js",
             "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js",
         ],
@@ -33,7 +32,7 @@ var options = {
         fns : [
             function(cb) {
                 // Javascript code to be run first step
-                cb(true);  // return results (can be anything, object etc)
+                cb(prompt("OK?") ? true : false);  // return results (can be anything, object etc)
             },
             function(cb) {
             // Javascript code to be run at second step
