@@ -82,7 +82,7 @@ var options = {
 
 #  Writing the test functions
 
-The test functions can be written or added in the options block
+Each test function will get a clean IFRAME to run at. The test functions can be written or added in the options block and the first parameter of the test function is the callback to report the results of the test ( can be anything ).
 
 ```javascript      
 var options = {
@@ -95,7 +95,9 @@ Each test function gets the callback where to return the results of the test asy
 means that the tests can also expect user interaction or acceptance from the user
 from the test result.
 
-You can also specify the test function as string in which case the callback function name is 'testResults'
+For example you could have a button to click if the test results looks OK to the the tester. After the test is run the IFRAME is cleared from the browser and next is created.
+
+If you want, you can also specify the test function as string in which case the callback function name is 'testResults'
 
 ```javascript      
 var options = {
