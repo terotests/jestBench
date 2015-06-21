@@ -6,7 +6,7 @@ The jestBench makes no assumptions of what kind of data you are collecting, whic
 
 JestBench is basicly a wrapper for anything that can be run inside IFRAME in your browser. Typically you want to import bunch of test libraries, custom preparation code, styles and HTML together with your test code and usually also the testing libraries like Jasmine or similar.
 
-The purpose of this library is to make trivial to create a setup where test-code can live and run, just like codePen or jsFiddle. One benefit of this approach is also that the test data can also be serialized in JSON format, as well as the results.
+The purpose of this library is to make trivial to create a setup where test-code can live and run, just like CodePen or jsFiddle. One benefit of this approach is also that the test data can also be serialized in JSON format, as well as the results.
 
 The steps taken are:
 
