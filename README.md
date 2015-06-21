@@ -184,7 +184,7 @@ var options = {
 jestBench().runTests( options );     
 ```
 
-http://jsfiddle.net/ovnffnLm/
+http://jsfiddle.net/555L47rm/
 
 
 # Licence
