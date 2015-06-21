@@ -1479,13 +1479,13 @@ var jestBench_prototype = function() {
       var me = this;
       this._results = [];
 
-      var myCnt = options.fns.length;
+      var myCnt = options.tests.length;
       var currCnt = 0;
 
       var stepper = sequenceStepper();
       // addCommands
 
-      options.fns.forEach(function(fn) {
+      options.tests.forEach(function(fn) {
 
         var jsCode = "",
           myFrame;
