@@ -4,17 +4,18 @@ A standalone, framework or testmethod agnostic testing environment and syncronou
 
 The jestBench makes no assumptions of what kind of data you are collecting, which libraries you are using or how you decided if the test failed or not. It only requires you to write a test function which accepts a callback function as first parameter to report the results.
 
-JestBench is basicly a wrapper for anything that can be run inside IFRAME in your browser.
+JestBench is basicly a wrapper for anything that can be run inside IFRAME in your browser. Typically you want to import bunch of test libraries, custom preparation code, styles and HTML together with your test code and usually also the testing libraries like Jasmine or similar.
 
-This means that you can run all you favourite test frameworks, be it `Mocha`, `Jasmine` or `QUnit` or any of them combined or without them using this simple tool.
+The purpose of this library is to make trivial to create a setup where test-code can live and run, just like codePen or jsFiddle. One benefit of this approach is also that the test data can also be serialized in JSON format, as well as the results.
 
 The steps taken are:
 
-1. Set up the external scripts and stylesheets for the tests
-2. Create preparation code (optional) 
-3. **Create Array of test functions which return the test results**
-4. Optionally specify IndexedDB database where to store the results 
-5. Optionally specify callback, which stores the test results somewhere else
+1. Select the external scripts and stylesheets for the tests
+2. **Create Array of test functions which return the test results**
+3. Optionally specify IndexedDB database where to store the results 
+4. Optionally specify callback, which stores the test results somewhere else
+
+And then just run the test setup. For other options see the documentation.
 
 
 ## Running
