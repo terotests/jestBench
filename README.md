@@ -152,7 +152,7 @@ The results are in format
 
 ```javascript
 jestBench().getDbResults( "my.testDb", function(list) {
-                console.log("DB");
+                console.log("The test results are");
                 console.log(list);
             } )
 ```
