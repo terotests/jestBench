@@ -1,6 +1,6 @@
 # jestBench
 
-A standalone, framework or testmethod agnostic testing environment running in the browser.
+A standalone, framework or testmethod agnostic testing environment and syncronous test-runner running in the browser.
 
 The jestBench makes no assumptions of what kind of data you are collecting, which libraries you are using or how you decided if the test failed or not. It only requires you to write a test function which accepts a callback function as first parameter to report the results.
 
