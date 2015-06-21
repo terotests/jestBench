@@ -143,6 +143,24 @@ var options = {
         description : "Additional information to the DB"
 ```
 
+The results are in format
+```javascript
+{testRunUTC: 1434904052517, extra: "description given", results: [ ... ]]}
+```
+
+## Retrieve the stored test results from the IndexedDB
+
+```javascript
+jestBench().getDbResults( "my.testDb", function(list) {
+                console.log("DB");
+                console.log(list);
+            } )
+```
+
+The results are in format
+```javascript
+{testRunUTC: 1434904052517, extra: "description given", results: [ ... ]]}
+```
 
 # Full Example of usage
 
