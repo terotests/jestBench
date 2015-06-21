@@ -184,6 +184,12 @@ var options = {
 jestBench().runTests( options );     
 ```
 
+http://jsfiddle.net/ovnffnLm/
+
+
+# Licence
+
+MIT.
 
 
 
