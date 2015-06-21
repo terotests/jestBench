@@ -1502,7 +1502,7 @@ var jestBench_prototype = function() {
         stepper.addCommands(
           function(done) {
             var obj = {
-              styleheets: options.stylesheets || [],
+              stylesheets: options.stylesheets || [],
               scripts: options.scripts || [],
               html: options.html || "",
               jsCode: jsCode,
