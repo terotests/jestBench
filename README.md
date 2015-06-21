@@ -148,7 +148,7 @@ var options = {
 
 The results are in format
 ```javascript
-{testRunUTC: 1434904052517, extra: "description given", results: [ ... ]]}
+{testRunUTC: 1434904052517, extra: "description given", results: [ ... ]}
 ```
 
 ## Retrieve the stored test results from the IndexedDB
@@ -162,7 +162,7 @@ jestBench().getDbResults( "my.testDb", function(list) {
 
 The results are in format
 ```javascript
-{testRunUTC: 1434904052517, extra: "description given", results: [ ... ]]}
+{testRunUTC: 1434904052517, extra: "description given", results: [ ... ]}
 ```
 
 # Full Example of usage
