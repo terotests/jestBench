@@ -64,11 +64,11 @@ var options = {
 
 ##  Inline JavaScript
 
-JavaScript can be embedded also as inline text with `jsCode`
+JavaScript can be embedded also as inline text with `prepCode`
 
 ```javascript
 var options = {
-        jsCode : "function inlineJsCode() { }",
+        prepCode : "function inlineJsCode() { }",
 ```
 
 ##  Size of the IFrame
@@ -180,7 +180,7 @@ var options = {
             "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js",
         ],
         html : "<div class='alert alert-info'>inline HTML</div>",
-        jsCode : "function inlineJsCode() { }",
+        prepCode : "function inlineJsCode() { }",
         width : 500, height : 300,
         tests : [
             function(cb) {
