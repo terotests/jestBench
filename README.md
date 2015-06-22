@@ -123,7 +123,7 @@ var options = {
 
 #  Collecting the results
 
-After all the tests have been run, the results from all the callbacks from the tests is retunred to `onReady` callback.
+After all the tests have been run, the results from all the callbacks from the tests is returned to `onReady` callback.
 
 ```javascript
 var options = {
