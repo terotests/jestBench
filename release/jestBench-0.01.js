@@ -1510,6 +1510,8 @@ var jestBench_prototype = function() {
 
         var jsCode = "",
           myFrame;
+        jsCode += "try {";
+
         if (options.prepCode) {
           jsCode += ";\n" + options.prepCode + ";\n";
         }
@@ -1519,6 +1521,7 @@ var jestBench_prototype = function() {
           // this should run the function... 
           jsCode += "(" + fn.toString() + ")(fiddleDone)";
         }
+        jsCode += "\n} catch(e) { fiddleDone({result : false, exception:true, text : e.message }); } ";
 
         stepper.addCommands(
           function(done) {
