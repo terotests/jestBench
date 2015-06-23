@@ -29,6 +29,15 @@ Callbacks from the test functions will be collected and can be stored to Indexed
 
 # Description of options
 
+##  Script timeout
+
+If the script does not execute the callback function in 5 seconds, it is invoced automatically. You can specify custom timeout using
+```javascript
+var options = {
+        timeOut : 1000, // 1 second
+```
+
+
 ##  External scripts
 
 Any external JavaScript file can be loaded to Iframe using
