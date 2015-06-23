@@ -36,7 +36,11 @@ If the script does not execute the callback function in 5 seconds, it is invoced
 var options = {
         timeOut : 1000, // 1 second
 ```
+If timeout occurs, the execution moves to the next test. The result of the current testi will be
 
+```javascript
+ { "result": false, "exception": true, "text": "timeout 1000ms" }
+```
 
 ##  External scripts
 
