@@ -31,7 +31,7 @@ Callbacks from the test functions will be collected and can be stored to Indexed
 
 ##  Script timeout
 
-If the script does not execute the callback function in 5 seconds, it is invoced automatically. You can specify custom timeout using
+If the script does not execute the callback function in 1.5 seconds, it is invoced automatically. You can specify custom timeout using
 ```javascript
 var options = {
         timeOut : 1000, // 1 second

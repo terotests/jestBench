@@ -1512,7 +1512,7 @@ var jestBench_prototype = function() {
           myFrame;
         jsCode += "try {";
 
-        if (!options.timeOut) options.timeOut = 5000;
+        if (!options.timeOut) options.timeOut = 1500;
 
         if (options.timeOut) {
           jsCode += "\n setTimeout( function() { fiddleDone({result : false, exception:true, text :'timeout " + options.timeOut + "ms' }); }, " + options.timeOut + ");\n";
