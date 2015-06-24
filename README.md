@@ -258,14 +258,14 @@ MIT.
 
 
         
-- [jestBench::fiddle](README.md#jestBench::fiddle)(options, parentNode)
+- [jestBench::fiddle](README.md#jestBench_fiddle)(options, parentNode)
 
-- [jestBench::getDbResults](README.md#jestBench::getDbResults)(databaseName, callBackFn)
+- [jestBench::getDbResults](README.md#jestBench_getDbResults)(databaseName, callBackFn)
 
         
-- [jestBench::runTests](README.md#jestBench::runTests)(options)
+- [jestBench::runTests](README.md#jestBench_runTests)(options)
 
-- [jestBench::saveToIndexed](README.md#jestBench::saveToIndexed)(databaseName, rows, extra)
+- [jestBench::saveToIndexed](README.md#jestBench_saveToIndexed)(databaseName, rows, extra)
 
 
 
@@ -280,13 +280,13 @@ MIT.
 ### trait _dataTrait
 
         
-- [_dataTrait::guid](README.md#_dataTrait::guid)(t)
+- [_dataTrait::guid](README.md#_dataTrait_guid)(t)
 
-- [_dataTrait::isArray](README.md#_dataTrait::isArray)(t)
+- [_dataTrait::isArray](README.md#_dataTrait_isArray)(t)
 
-- [_dataTrait::isFunction](README.md#_dataTrait::isFunction)(fn)
+- [_dataTrait::isFunction](README.md#_dataTrait_isFunction)(fn)
 
-- [_dataTrait::isObject](README.md#_dataTrait::isObject)(t)
+- [_dataTrait::isObject](README.md#_dataTrait_isObject)(t)
 
 
     
@@ -302,44 +302,44 @@ MIT.
 
 
         
-- [_promise::all](README.md#_promise::all)(firstArg)
+- [_promise::all](README.md#_promise_all)(firstArg)
 
-- [_promise::collect](README.md#_promise::collect)(collectFn, promiseList, results)
+- [_promise::collect](README.md#_promise_collect)(collectFn, promiseList, results)
 
-- [_promise::fail](README.md#_promise::fail)(fn)
+- [_promise::fail](README.md#_promise_fail)(fn)
 
-- [_promise::fulfill](README.md#_promise::fulfill)(withValue)
+- [_promise::fulfill](README.md#_promise_fulfill)(withValue)
 
-- [_promise::genPlugin](README.md#_promise::genPlugin)(fname, fn)
+- [_promise::genPlugin](README.md#_promise_genPlugin)(fname, fn)
 
         
-- [_promise::isFulfilled](README.md#_promise::isFulfilled)(t)
+- [_promise::isFulfilled](README.md#_promise_isFulfilled)(t)
 
-- [_promise::isPending](README.md#_promise::isPending)(t)
+- [_promise::isPending](README.md#_promise_isPending)(t)
 
-- [_promise::isRejected](README.md#_promise::isRejected)(v)
+- [_promise::isRejected](README.md#_promise_isRejected)(v)
 
-- [_promise::nodeStyle](README.md#_promise::nodeStyle)(fname, fn)
+- [_promise::nodeStyle](README.md#_promise_nodeStyle)(fname, fn)
 
-- [_promise::onStateChange](README.md#_promise::onStateChange)(fn)
+- [_promise::onStateChange](README.md#_promise_onStateChange)(fn)
 
-- [_promise::plugin](README.md#_promise::plugin)(n, fn)
+- [_promise::plugin](README.md#_promise_plugin)(n, fn)
 
-- [_promise::props](README.md#_promise::props)(obj)
+- [_promise::props](README.md#_promise_props)(obj)
 
-- [_promise::reject](README.md#_promise::reject)(withReason)
+- [_promise::reject](README.md#_promise_reject)(withReason)
 
-- [_promise::rejectReason](README.md#_promise::rejectReason)(reason)
+- [_promise::rejectReason](README.md#_promise_rejectReason)(reason)
 
-- [_promise::resolve](README.md#_promise::resolve)(x)
+- [_promise::resolve](README.md#_promise_resolve)(x)
 
-- [_promise::state](README.md#_promise::state)(newState)
+- [_promise::state](README.md#_promise_state)(newState)
 
-- [_promise::then](README.md#_promise::then)(onFulfilled, onRejected)
+- [_promise::then](README.md#_promise_then)(onFulfilled, onRejected)
 
-- [_promise::triggerStateChange](README.md#_promise::triggerStateChange)(t)
+- [_promise::triggerStateChange](README.md#_promise_triggerStateChange)(t)
 
-- [_promise::value](README.md#_promise::value)(v)
+- [_promise::value](README.md#_promise_value)(v)
 
 
 
@@ -348,11 +348,11 @@ MIT.
 ### trait util_fns
 
         
-- [util_fns::isArray](README.md#util_fns::isArray)(someVar)
+- [util_fns::isArray](README.md#util_fns_isArray)(someVar)
 
-- [util_fns::isFunction](README.md#util_fns::isFunction)(fn)
+- [util_fns::isFunction](README.md#util_fns_isFunction)(fn)
 
-- [util_fns::isObject](README.md#util_fns::isObject)(obj)
+- [util_fns::isObject](README.md#util_fns_isObject)(obj)
 
 
     
@@ -370,22 +370,22 @@ MIT.
 
 
         
-- [later::add](README.md#later::add)(fn, thisObj, args)
+- [later::add](README.md#later_add)(fn, thisObj, args)
 
-- [later::after](README.md#later::after)(seconds, fn, name)
+- [later::after](README.md#later_after)(seconds, fn, name)
 
-- [later::asap](README.md#later::asap)(fn)
+- [later::asap](README.md#later_asap)(fn)
 
-- [later::every](README.md#later::every)(seconds, fn, name)
+- [later::every](README.md#later_every)(seconds, fn, name)
 
         
-- [later::once](README.md#later::once)(key, fn, value)
+- [later::once](README.md#later_once)(key, fn, value)
 
-- [later::onFrame](README.md#later::onFrame)(fn)
+- [later::onFrame](README.md#later_onFrame)(fn)
 
-- [later::polyfill](README.md#later::polyfill)(t)
+- [later::polyfill](README.md#later_polyfill)(t)
 
-- [later::removeFrameFn](README.md#later::removeFrameFn)(fn)
+- [later::removeFrameFn](README.md#later_removeFrameFn)(fn)
 
 
 
@@ -409,18 +409,18 @@ MIT.
 
 
         
-- [_localDB::_initDB](README.md#_localDB::_initDB)(t)
+- [_localDB::_initDB](README.md#_localDB__initDB)(t)
 
-- [_localDB::clearDatabases](README.md#_localDB::clearDatabases)(fn)
+- [_localDB::clearDatabases](README.md#_localDB_clearDatabases)(fn)
 
-- [_localDB::createTable](README.md#_localDB::createTable)(name, options)
+- [_localDB::createTable](README.md#_localDB_createTable)(name, options)
 
-- [_localDB::getDB](README.md#_localDB::getDB)(t)
+- [_localDB::getDB](README.md#_localDB_getDB)(t)
 
-- [_localDB::getStore](README.md#_localDB::getStore)(store_name, mode)
+- [_localDB::getStore](README.md#_localDB_getStore)(store_name, mode)
 
         
-- [_localDB::table](README.md#_localDB::table)(name)
+- [_localDB::table](README.md#_localDB_table)(name)
 
 
 
@@ -431,13 +431,13 @@ MIT.
 ### trait _dataTrait
 
         
-- [_dataTrait::guid](README.md#_dataTrait::guid)(t)
+- [_dataTrait::guid](README.md#_dataTrait_guid)(t)
 
-- [_dataTrait::isArray](README.md#_dataTrait::isArray)(t)
+- [_dataTrait::isArray](README.md#_dataTrait_isArray)(t)
 
-- [_dataTrait::isFunction](README.md#_dataTrait::isFunction)(fn)
+- [_dataTrait::isFunction](README.md#_dataTrait_isFunction)(fn)
 
-- [_dataTrait::isObject](README.md#_dataTrait::isObject)(t)
+- [_dataTrait::isObject](README.md#_dataTrait_isObject)(t)
 
 
     
@@ -451,22 +451,22 @@ MIT.
 
 
         
-- [dbTable::addRows](README.md#dbTable::addRows)(rows)
+- [dbTable::addRows](README.md#dbTable_addRows)(rows)
 
-- [dbTable::clear](README.md#dbTable::clear)(t)
+- [dbTable::clear](README.md#dbTable_clear)(t)
 
-- [dbTable::count](README.md#dbTable::count)(t)
+- [dbTable::count](README.md#dbTable_count)(t)
 
-- [dbTable::forEach](README.md#dbTable::forEach)(fn)
+- [dbTable::forEach](README.md#dbTable_forEach)(fn)
 
-- [dbTable::get](README.md#dbTable::get)(key)
+- [dbTable::get](README.md#dbTable_get)(key)
 
-- [dbTable::getAll](README.md#dbTable::getAll)(t)
+- [dbTable::getAll](README.md#dbTable_getAll)(t)
 
         
-- [dbTable::readAndDelete](README.md#dbTable::readAndDelete)(t)
+- [dbTable::readAndDelete](README.md#dbTable_readAndDelete)(t)
 
-- [dbTable::update](README.md#dbTable::update)(key, data)
+- [dbTable::update](README.md#dbTable_update)(key, data)
 
 
 
@@ -475,13 +475,13 @@ MIT.
 ### trait _dataTrait
 
         
-- [_dataTrait::guid](README.md#_dataTrait::guid)(t)
+- [_dataTrait::guid](README.md#_dataTrait_guid)(t)
 
-- [_dataTrait::isArray](README.md#_dataTrait::isArray)(t)
+- [_dataTrait::isArray](README.md#_dataTrait_isArray)(t)
 
-- [_dataTrait::isFunction](README.md#_dataTrait::isFunction)(fn)
+- [_dataTrait::isFunction](README.md#_dataTrait_isFunction)(fn)
 
-- [_dataTrait::isObject](README.md#_dataTrait::isObject)(t)
+- [_dataTrait::isObject](README.md#_dataTrait_isObject)(t)
 
 
     
@@ -509,12 +509,12 @@ MIT.
 
 
         
-- [sequenceStepper::_classFactory](README.md#sequenceStepper::_classFactory)(id, manual)
+- [sequenceStepper::_classFactory](README.md#sequenceStepper__classFactory)(id, manual)
 
-- [sequenceStepper::addCommands](README.md#sequenceStepper::addCommands)(cmdFunction, failure)
+- [sequenceStepper::addCommands](README.md#sequenceStepper_addCommands)(cmdFunction, failure)
 
         
-- [sequenceStepper::step](README.md#sequenceStepper::step)(t)
+- [sequenceStepper::step](README.md#sequenceStepper_step)(t)
 
 
 
@@ -523,13 +523,13 @@ MIT.
 ### trait _dataTrait
 
         
-- [_dataTrait::guid](README.md#_dataTrait::guid)(t)
+- [_dataTrait::guid](README.md#_dataTrait_guid)(t)
 
-- [_dataTrait::isArray](README.md#_dataTrait::isArray)(t)
+- [_dataTrait::isArray](README.md#_dataTrait_isArray)(t)
 
-- [_dataTrait::isFunction](README.md#_dataTrait::isFunction)(fn)
+- [_dataTrait::isFunction](README.md#_dataTrait_isFunction)(fn)
 
-- [_dataTrait::isObject](README.md#_dataTrait::isObject)(t)
+- [_dataTrait::isObject](README.md#_dataTrait_isObject)(t)
 
 
     
@@ -552,22 +552,22 @@ MIT.
 
 
         
-- [later::add](README.md#later::add)(fn, thisObj, args)
+- [later::add](README.md#later_add)(fn, thisObj, args)
 
-- [later::after](README.md#later::after)(seconds, fn, name)
+- [later::after](README.md#later_after)(seconds, fn, name)
 
-- [later::asap](README.md#later::asap)(fn)
+- [later::asap](README.md#later_asap)(fn)
 
-- [later::every](README.md#later::every)(seconds, fn, name)
+- [later::every](README.md#later_every)(seconds, fn, name)
 
         
-- [later::once](README.md#later::once)(key, fn, value)
+- [later::once](README.md#later_once)(key, fn, value)
 
-- [later::onFrame](README.md#later::onFrame)(fn)
+- [later::onFrame](README.md#later_onFrame)(fn)
 
-- [later::polyfill](README.md#later::polyfill)(t)
+- [later::polyfill](README.md#later_polyfill)(t)
 
-- [later::removeFrameFn](README.md#later::removeFrameFn)(fn)
+- [later::removeFrameFn](README.md#later_removeFrameFn)(fn)
 
 
 
@@ -592,7 +592,7 @@ MIT.
 The class has following internal singleton variables:
         
         
-### <a name="jestBench::fiddle"></a>jestBench::fiddle(options, parentNode)
+### <a name="jestBench_fiddle"></a>jestBench::fiddle(options, parentNode)
 
 
 ```javascript
@@ -645,7 +645,7 @@ s.height = (options.height || 600)+"px";
 return iframe;
 ```
 
-### <a name="jestBench::getDbResults"></a>jestBench::getDbResults(databaseName, callBackFn)
+### <a name="jestBench_getDbResults"></a>jestBench::getDbResults(databaseName, callBackFn)
 
 
 ```javascript
@@ -675,7 +675,7 @@ db.then( function() {
 this._options = options;
 ```
         
-### <a name="jestBench::runTests"></a>jestBench::runTests(options)
+### <a name="jestBench_runTests"></a>jestBench::runTests(options)
 
 
 ```javascript
@@ -741,7 +741,7 @@ options.tests.forEach( function(fn) {
 });
 ```
 
-### <a name="jestBench::saveToIndexed"></a>jestBench::saveToIndexed(databaseName, rows, extra)
+### <a name="jestBench_saveToIndexed"></a>jestBench::saveToIndexed(databaseName, rows, extra)
 
 
 ```javascript
@@ -783,7 +783,7 @@ The class has following internal singleton variables:
 * _commands
         
         
-### <a name="_dataTrait::guid"></a>_dataTrait::guid(t)
+### <a name="_dataTrait_guid"></a>_dataTrait::guid(t)
 
 
 ```javascript
@@ -793,21 +793,21 @@ return Math.random().toString(36).substring(2, 15) +
 
 ```
 
-### <a name="_dataTrait::isArray"></a>_dataTrait::isArray(t)
+### <a name="_dataTrait_isArray"></a>_dataTrait::isArray(t)
 
 
 ```javascript
 return Object.prototype.toString.call( t ) === '[object Array]';
 ```
 
-### <a name="_dataTrait::isFunction"></a>_dataTrait::isFunction(fn)
+### <a name="_dataTrait_isFunction"></a>_dataTrait::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### <a name="_dataTrait::isObject"></a>_dataTrait::isObject(t)
+### <a name="_dataTrait_isObject"></a>_dataTrait::isObject(t)
 
 
 ```javascript
@@ -830,7 +830,7 @@ return t === Object(t);
 The class has following internal singleton variables:
         
         
-### <a name="_promise::all"></a>_promise::all(firstArg)
+### <a name="_promise_all"></a>_promise::all(firstArg)
 
 
 ```javascript
@@ -885,7 +885,7 @@ return this.then(
 
 ```
 
-### <a name="_promise::collect"></a>_promise::collect(collectFn, promiseList, results)
+### <a name="_promise_collect"></a>_promise::collect(collectFn, promiseList, results)
 
 
 ```javascript
@@ -936,14 +936,14 @@ return this.then(
 
 ```
 
-### <a name="_promise::fail"></a>_promise::fail(fn)
+### <a name="_promise_fail"></a>_promise::fail(fn)
 
 
 ```javascript
 return this.then(null, fn);
 ```
 
-### <a name="_promise::fulfill"></a>_promise::fulfill(withValue)
+### <a name="_promise_fulfill"></a>_promise::fulfill(withValue)
 
 
 ```javascript
@@ -993,7 +993,7 @@ this.triggerStateChange();
 
 ```
 
-### <a name="_promise::genPlugin"></a>_promise::genPlugin(fname, fn)
+### <a name="_promise_genPlugin"></a>_promise::genPlugin(fname, fn)
 
 
 ```javascript
@@ -1052,28 +1052,28 @@ if(!onRejected && this.isFunction(onFulfilled) ) {
 }
 ```
         
-### <a name="_promise::isFulfilled"></a>_promise::isFulfilled(t)
+### <a name="_promise_isFulfilled"></a>_promise::isFulfilled(t)
 
 
 ```javascript
 return this._state == 1;
 ```
 
-### <a name="_promise::isPending"></a>_promise::isPending(t)
+### <a name="_promise_isPending"></a>_promise::isPending(t)
 
 
 ```javascript
 return this._state == 0;
 ```
 
-### <a name="_promise::isRejected"></a>_promise::isRejected(v)
+### <a name="_promise_isRejected"></a>_promise::isRejected(v)
 
 
 ```javascript
 return this._state == 2;
 ```
 
-### <a name="_promise::nodeStyle"></a>_promise::nodeStyle(fname, fn)
+### <a name="_promise_nodeStyle"></a>_promise::nodeStyle(fname, fn)
 
 
 ```javascript
@@ -1144,7 +1144,7 @@ this.plugin(fname,
 );
 ```
 
-### <a name="_promise::onStateChange"></a>_promise::onStateChange(fn)
+### <a name="_promise_onStateChange"></a>_promise::onStateChange(fn)
 
 
 ```javascript
@@ -1155,7 +1155,7 @@ if(!this._listeners)
 this._listeners.push(fn);
 ```
 
-### <a name="_promise::plugin"></a>_promise::plugin(n, fn)
+### <a name="_promise_plugin"></a>_promise::plugin(n, fn)
 
 
 ```javascript
@@ -1165,7 +1165,7 @@ _myTrait_[n] = fn;
 return this;
 ```
 
-### <a name="_promise::props"></a>_promise::props(obj)
+### <a name="_promise_props"></a>_promise::props(obj)
 
 
 ```javascript
@@ -1219,7 +1219,7 @@ return this.then(
 
 ```
 
-### <a name="_promise::reject"></a>_promise::reject(withReason)
+### <a name="_promise_reject"></a>_promise::reject(withReason)
 
 
 ```javascript
@@ -1266,7 +1266,7 @@ this.triggerStateChange();
 
 ```
 
-### <a name="_promise::rejectReason"></a>_promise::rejectReason(reason)
+### <a name="_promise_rejectReason"></a>_promise::rejectReason(reason)
 
 
 ```javascript
@@ -1277,7 +1277,7 @@ if(reason) {
 return this._rejectReason;
 ```
 
-### <a name="_promise::resolve"></a>_promise::resolve(x)
+### <a name="_promise_resolve"></a>_promise::resolve(x)
 
 
 ```javascript
@@ -1356,7 +1356,7 @@ this.fulfill(x);
 
 ```
 
-### <a name="_promise::state"></a>_promise::state(newState)
+### <a name="_promise_state"></a>_promise::state(newState)
 
 
 ```javascript
@@ -1366,7 +1366,7 @@ if(typeof(newState)!="undefined") {
 return this._state;
 ```
 
-### <a name="_promise::then"></a>_promise::then(onFulfilled, onRejected)
+### <a name="_promise_then"></a>_promise::then(onFulfilled, onRejected)
 
 
 ```javascript
@@ -1393,7 +1393,7 @@ return p;
 
 ```
 
-### <a name="_promise::triggerStateChange"></a>_promise::triggerStateChange(t)
+### <a name="_promise_triggerStateChange"></a>_promise::triggerStateChange(t)
 
 
 ```javascript
@@ -1406,7 +1406,7 @@ this._listeners.forEach( function(fn) {
 this._listeners.length = 0;
 ```
 
-### <a name="_promise::value"></a>_promise::value(v)
+### <a name="_promise_value"></a>_promise::value(v)
 
 
 ```javascript
@@ -1426,21 +1426,21 @@ return this._stateValue;
 The class has following internal singleton variables:
         
         
-### <a name="util_fns::isArray"></a>util_fns::isArray(someVar)
+### <a name="util_fns_isArray"></a>util_fns::isArray(someVar)
 
 
 ```javascript
 return Object.prototype.toString.call( someVar ) === '[object Array]';
 ```
 
-### <a name="util_fns::isFunction"></a>util_fns::isFunction(fn)
+### <a name="util_fns_isFunction"></a>util_fns::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### <a name="util_fns::isObject"></a>util_fns::isObject(obj)
+### <a name="util_fns_isObject"></a>util_fns::isObject(obj)
 
 
 ```javascript
@@ -1475,7 +1475,7 @@ The class has following internal singleton variables:
 * _framers
         
         
-### <a name="later::add"></a>later::add(fn, thisObj, args)
+### <a name="later_add"></a>later::add(fn, thisObj, args)
 
 
 ```javascript
@@ -1493,7 +1493,7 @@ if(thisObj || args) {
 }
 ```
 
-### <a name="later::after"></a>later::after(seconds, fn, name)
+### <a name="later_after"></a>later::after(seconds, fn, name)
 
 
 ```javascript
@@ -1510,7 +1510,7 @@ _everies[name] = {
 };
 ```
 
-### <a name="later::asap"></a>later::asap(fn)
+### <a name="later_asap"></a>later::asap(fn)
 
 
 ```javascript
@@ -1518,7 +1518,7 @@ this.add(fn);
 
 ```
 
-### <a name="later::every"></a>later::every(seconds, fn, name)
+### <a name="later_every"></a>later::every(seconds, fn, name)
 
 
 ```javascript
@@ -1627,7 +1627,7 @@ if(!_initDone) {
 }
 ```
         
-### <a name="later::once"></a>later::once(key, fn, value)
+### <a name="later_once"></a>later::once(key, fn, value)
 
 
 ```javascript
@@ -1636,7 +1636,7 @@ if(!_initDone) {
 _oneTimers[key] = [fn,value];
 ```
 
-### <a name="later::onFrame"></a>later::onFrame(fn)
+### <a name="later_onFrame"></a>later::onFrame(fn)
 
 
 ```javascript
@@ -1644,14 +1644,14 @@ _oneTimers[key] = [fn,value];
 _framers.push(fn);
 ```
 
-### <a name="later::polyfill"></a>later::polyfill(t)
+### <a name="later_polyfill"></a>later::polyfill(t)
 
 
 ```javascript
 
 ```
 
-### <a name="later::removeFrameFn"></a>later::removeFrameFn(fn)
+### <a name="later_removeFrameFn"></a>later::removeFrameFn(fn)
 
 
 ```javascript
@@ -1698,7 +1698,7 @@ The class has following internal singleton variables:
 * _db
         
         
-### <a name="_localDB::_initDB"></a>_localDB::_initDB(t)
+### <a name="_localDB__initDB"></a>_localDB::_initDB(t)
 
 
 ```javascript
@@ -1718,7 +1718,7 @@ _dbList = _localDB( "sys.db", {
 });
 ```
 
-### <a name="_localDB::clearDatabases"></a>_localDB::clearDatabases(fn)
+### <a name="_localDB_clearDatabases"></a>_localDB::clearDatabases(fn)
 
 
 ```javascript
@@ -1738,7 +1738,7 @@ _dbList.then( function() {
 })
 ```
 
-### <a name="_localDB::createTable"></a>_localDB::createTable(name, options)
+### <a name="_localDB_createTable"></a>_localDB::createTable(name, options)
 
 
 ```javascript
@@ -1750,14 +1750,14 @@ return this.table( name );
 
 ```
 
-### <a name="_localDB::getDB"></a>_localDB::getDB(t)
+### <a name="_localDB_getDB"></a>_localDB::getDB(t)
 
 
 ```javascript
 return this._db;
 ```
 
-### <a name="_localDB::getStore"></a>_localDB::getStore(store_name, mode)
+### <a name="_localDB_getStore"></a>_localDB::getStore(store_name, mode)
 
 
 ```javascript
@@ -1813,7 +1813,7 @@ request.onupgradeneeded = function (event) {
 
 ```
         
-### <a name="_localDB::table"></a>_localDB::table(name)
+### <a name="_localDB_table"></a>_localDB::table(name)
 
 
 ```javascript
@@ -1835,7 +1835,7 @@ The class has following internal singleton variables:
 * _commands
         
         
-### <a name="_dataTrait::guid"></a>_dataTrait::guid(t)
+### <a name="_dataTrait_guid"></a>_dataTrait::guid(t)
 
 
 ```javascript
@@ -1845,21 +1845,21 @@ return Math.random().toString(36).substring(2, 15) +
 
 ```
 
-### <a name="_dataTrait::isArray"></a>_dataTrait::isArray(t)
+### <a name="_dataTrait_isArray"></a>_dataTrait::isArray(t)
 
 
 ```javascript
 return Object.prototype.toString.call( t ) === '[object Array]';
 ```
 
-### <a name="_dataTrait::isFunction"></a>_dataTrait::isFunction(fn)
+### <a name="_dataTrait_isFunction"></a>_dataTrait::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### <a name="_dataTrait::isObject"></a>_dataTrait::isObject(t)
+### <a name="_dataTrait_isObject"></a>_dataTrait::isObject(t)
 
 
 ```javascript
@@ -1880,7 +1880,7 @@ return t === Object(t);
 The class has following internal singleton variables:
         
         
-### <a name="dbTable::addRows"></a>dbTable::addRows(rows)
+### <a name="dbTable_addRows"></a>dbTable::addRows(rows)
 
 
 ```javascript
@@ -1911,7 +1911,7 @@ for (var i in rows) {
 return prom;
 ```
 
-### <a name="dbTable::clear"></a>dbTable::clear(t)
+### <a name="dbTable_clear"></a>dbTable::clear(t)
 
 
 ```javascript
@@ -1931,7 +1931,7 @@ return prom;
 
 ```
 
-### <a name="dbTable::count"></a>dbTable::count(t)
+### <a name="dbTable_count"></a>dbTable::count(t)
 
 
 ```javascript
@@ -1946,7 +1946,7 @@ return prom;
 
 ```
 
-### <a name="dbTable::forEach"></a>dbTable::forEach(fn)
+### <a name="dbTable_forEach"></a>dbTable::forEach(fn)
 
 
 ```javascript
@@ -1975,7 +1975,7 @@ cursorRequest.onsuccess = function(evt) {
 
 ```
 
-### <a name="dbTable::get"></a>dbTable::get(key)
+### <a name="dbTable_get"></a>dbTable::get(key)
 
 
 ```javascript
@@ -1997,7 +1997,7 @@ request.onsuccess = function(event) {
 return prom;
 ```
 
-### <a name="dbTable::getAll"></a>dbTable::getAll(t)
+### <a name="dbTable_getAll"></a>dbTable::getAll(t)
 
 
 ```javascript
@@ -2039,7 +2039,7 @@ this._table = tableName;
 
 ```
         
-### <a name="dbTable::readAndDelete"></a>dbTable::readAndDelete(t)
+### <a name="dbTable_readAndDelete"></a>dbTable::readAndDelete(t)
 
 
 ```javascript
@@ -2073,7 +2073,7 @@ return prom;
 
 ```
 
-### <a name="dbTable::update"></a>dbTable::update(key, data)
+### <a name="dbTable_update"></a>dbTable::update(key, data)
 
 
 ```javascript
@@ -2130,7 +2130,7 @@ The class has following internal singleton variables:
 * _commands
         
         
-### <a name="_dataTrait::guid"></a>_dataTrait::guid(t)
+### <a name="_dataTrait_guid"></a>_dataTrait::guid(t)
 
 
 ```javascript
@@ -2140,21 +2140,21 @@ return Math.random().toString(36).substring(2, 15) +
 
 ```
 
-### <a name="_dataTrait::isArray"></a>_dataTrait::isArray(t)
+### <a name="_dataTrait_isArray"></a>_dataTrait::isArray(t)
 
 
 ```javascript
 return Object.prototype.toString.call( t ) === '[object Array]';
 ```
 
-### <a name="_dataTrait::isFunction"></a>_dataTrait::isFunction(fn)
+### <a name="_dataTrait_isFunction"></a>_dataTrait::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### <a name="_dataTrait::isObject"></a>_dataTrait::isObject(t)
+### <a name="_dataTrait_isObject"></a>_dataTrait::isObject(t)
 
 
 ```javascript
@@ -2191,7 +2191,7 @@ The class has following internal singleton variables:
 * _instances
         
         
-### <a name="sequenceStepper::_classFactory"></a>sequenceStepper::_classFactory(id, manual)
+### <a name="sequenceStepper__classFactory"></a>sequenceStepper::_classFactory(id, manual)
 
 
 ```javascript
@@ -2209,7 +2209,7 @@ if(_instances[id]) {
 }
 ```
 
-### <a name="sequenceStepper::addCommands"></a>sequenceStepper::addCommands(cmdFunction, failure)
+### <a name="sequenceStepper_addCommands"></a>sequenceStepper::addCommands(cmdFunction, failure)
 
 
 ```javascript
@@ -2247,7 +2247,7 @@ if(!manual) {
 
 ```
         
-### <a name="sequenceStepper::step"></a>sequenceStepper::step(t)
+### <a name="sequenceStepper_step"></a>sequenceStepper::step(t)
 
 
 ```javascript
@@ -2319,7 +2319,7 @@ The class has following internal singleton variables:
 * _commands
         
         
-### <a name="_dataTrait::guid"></a>_dataTrait::guid(t)
+### <a name="_dataTrait_guid"></a>_dataTrait::guid(t)
 
 
 ```javascript
@@ -2329,21 +2329,21 @@ return Math.random().toString(36).substring(2, 15) +
 
 ```
 
-### <a name="_dataTrait::isArray"></a>_dataTrait::isArray(t)
+### <a name="_dataTrait_isArray"></a>_dataTrait::isArray(t)
 
 
 ```javascript
 return Object.prototype.toString.call( t ) === '[object Array]';
 ```
 
-### <a name="_dataTrait::isFunction"></a>_dataTrait::isFunction(fn)
+### <a name="_dataTrait_isFunction"></a>_dataTrait::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### <a name="_dataTrait::isObject"></a>_dataTrait::isObject(t)
+### <a name="_dataTrait_isObject"></a>_dataTrait::isObject(t)
 
 
 ```javascript
@@ -2383,7 +2383,7 @@ The class has following internal singleton variables:
 * _framers
         
         
-### <a name="later::add"></a>later::add(fn, thisObj, args)
+### <a name="later_add"></a>later::add(fn, thisObj, args)
 
 
 ```javascript
@@ -2401,7 +2401,7 @@ if(thisObj || args) {
 }
 ```
 
-### <a name="later::after"></a>later::after(seconds, fn, name)
+### <a name="later_after"></a>later::after(seconds, fn, name)
 
 
 ```javascript
@@ -2418,7 +2418,7 @@ _everies[name] = {
 };
 ```
 
-### <a name="later::asap"></a>later::asap(fn)
+### <a name="later_asap"></a>later::asap(fn)
 
 
 ```javascript
@@ -2426,7 +2426,7 @@ this.add(fn);
 
 ```
 
-### <a name="later::every"></a>later::every(seconds, fn, name)
+### <a name="later_every"></a>later::every(seconds, fn, name)
 
 
 ```javascript
@@ -2535,7 +2535,7 @@ if(!_initDone) {
 }
 ```
         
-### <a name="later::once"></a>later::once(key, fn, value)
+### <a name="later_once"></a>later::once(key, fn, value)
 
 
 ```javascript
@@ -2544,7 +2544,7 @@ if(!_initDone) {
 _oneTimers[key] = [fn,value];
 ```
 
-### <a name="later::onFrame"></a>later::onFrame(fn)
+### <a name="later_onFrame"></a>later::onFrame(fn)
 
 
 ```javascript
@@ -2552,14 +2552,14 @@ _oneTimers[key] = [fn,value];
 _framers.push(fn);
 ```
 
-### <a name="later::polyfill"></a>later::polyfill(t)
+### <a name="later_polyfill"></a>later::polyfill(t)
 
 
 ```javascript
 
 ```
 
-### <a name="later::removeFrameFn"></a>later::removeFrameFn(fn)
+### <a name="later_removeFrameFn"></a>later::removeFrameFn(fn)
 
 
 ```javascript
