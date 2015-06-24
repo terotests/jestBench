@@ -257,8 +257,8 @@ MIT.
 ## Class jestBench
 
 
-        `[jestBench::fiddle](README.md#jestBench_fiddle)` `[jestBench::getDbResults](README.md#jestBench_getDbResults)` 
-        `[jestBench::runTests](README.md#jestBench_runTests)` `[jestBench::saveToIndexed](README.md#jestBench_saveToIndexed)` 
+         [fiddle](README.md#jestBench_fiddle)  [getDbResults](README.md#jestBench_getDbResults) 
+         [runTests](README.md#jestBench_runTests)  [saveToIndexed](README.md#jestBench_saveToIndexed) 
 
 
    
@@ -271,7 +271,7 @@ MIT.
     
 ### trait _dataTrait
 
-        `[_dataTrait::guid](README.md#_dataTrait_guid)` `[_dataTrait::isArray](README.md#_dataTrait_isArray)` `[_dataTrait::isFunction](README.md#_dataTrait_isFunction)` `[_dataTrait::isObject](README.md#_dataTrait_isObject)` 
+         [guid](README.md#_dataTrait_guid)  [isArray](README.md#_dataTrait_isArray)  [isFunction](README.md#_dataTrait_isFunction)  [isObject](README.md#_dataTrait_isObject) 
 
     
     
@@ -285,15 +285,15 @@ MIT.
 ## Class _promise
 
 
-        `[_promise::all](README.md#_promise_all)` `[_promise::collect](README.md#_promise_collect)` `[_promise::fail](README.md#_promise_fail)` `[_promise::fulfill](README.md#_promise_fulfill)` `[_promise::genPlugin](README.md#_promise_genPlugin)` 
-        `[_promise::isFulfilled](README.md#_promise_isFulfilled)` `[_promise::isPending](README.md#_promise_isPending)` `[_promise::isRejected](README.md#_promise_isRejected)` `[_promise::nodeStyle](README.md#_promise_nodeStyle)` `[_promise::onStateChange](README.md#_promise_onStateChange)` `[_promise::plugin](README.md#_promise_plugin)` `[_promise::props](README.md#_promise_props)` `[_promise::reject](README.md#_promise_reject)` `[_promise::rejectReason](README.md#_promise_rejectReason)` `[_promise::resolve](README.md#_promise_resolve)` `[_promise::state](README.md#_promise_state)` `[_promise::then](README.md#_promise_then)` `[_promise::triggerStateChange](README.md#_promise_triggerStateChange)` `[_promise::value](README.md#_promise_value)` 
+         [all](README.md#_promise_all)  [collect](README.md#_promise_collect)  [fail](README.md#_promise_fail)  [fulfill](README.md#_promise_fulfill)  [genPlugin](README.md#_promise_genPlugin) 
+         [isFulfilled](README.md#_promise_isFulfilled)  [isPending](README.md#_promise_isPending)  [isRejected](README.md#_promise_isRejected)  [nodeStyle](README.md#_promise_nodeStyle)  [onStateChange](README.md#_promise_onStateChange)  [plugin](README.md#_promise_plugin)  [props](README.md#_promise_props)  [reject](README.md#_promise_reject)  [rejectReason](README.md#_promise_rejectReason)  [resolve](README.md#_promise_resolve)  [state](README.md#_promise_state)  [then](README.md#_promise_then)  [triggerStateChange](README.md#_promise_triggerStateChange)  [value](README.md#_promise_value) 
 
 
    
     
 ### trait util_fns
 
-        `[util_fns::isArray](README.md#util_fns_isArray)` `[util_fns::isFunction](README.md#util_fns_isFunction)` `[util_fns::isObject](README.md#util_fns_isObject)` 
+         [isArray](README.md#util_fns_isArray)  [isFunction](README.md#util_fns_isFunction)  [isObject](README.md#util_fns_isObject) 
 
     
     
@@ -309,8 +309,8 @@ MIT.
 ## Class later
 
 
-        `[later::add](README.md#later_add)` `[later::after](README.md#later_after)` `[later::asap](README.md#later_asap)` `[later::every](README.md#later_every)` 
-        `[later::once](README.md#later_once)` `[later::onFrame](README.md#later_onFrame)` `[later::polyfill](README.md#later_polyfill)` `[later::removeFrameFn](README.md#later_removeFrameFn)` 
+         [add](README.md#later_add)  [after](README.md#later_after)  [asap](README.md#later_asap)  [every](README.md#later_every) 
+         [once](README.md#later_once)  [onFrame](README.md#later_onFrame)  [polyfill](README.md#later_polyfill)  [removeFrameFn](README.md#later_removeFrameFn) 
 
 
    
@@ -332,8 +332,8 @@ MIT.
 ## Class _localDB
 
 
-        `[_localDB::_initDB](README.md#_localDB__initDB)` `[_localDB::clearDatabases](README.md#_localDB_clearDatabases)` `[_localDB::createTable](README.md#_localDB_createTable)` `[_localDB::getDB](README.md#_localDB_getDB)` `[_localDB::getStore](README.md#_localDB_getStore)` 
-        `[_localDB::table](README.md#_localDB_table)` 
+         [_initDB](README.md#_localDB__initDB)  [clearDatabases](README.md#_localDB_clearDatabases)  [createTable](README.md#_localDB_createTable)  [getDB](README.md#_localDB_getDB)  [getStore](README.md#_localDB_getStore) 
+         [table](README.md#_localDB_table) 
 
 
    
@@ -342,7 +342,7 @@ MIT.
     
 ### trait _dataTrait
 
-        `[_dataTrait::guid](README.md#_dataTrait_guid)` `[_dataTrait::isArray](README.md#_dataTrait_isArray)` `[_dataTrait::isFunction](README.md#_dataTrait_isFunction)` `[_dataTrait::isObject](README.md#_dataTrait_isObject)` 
+         [guid](README.md#_dataTrait_guid)  [isArray](README.md#_dataTrait_isArray)  [isFunction](README.md#_dataTrait_isFunction)  [isObject](README.md#_dataTrait_isObject) 
 
     
     
@@ -354,15 +354,15 @@ MIT.
 ## Class dbTable
 
 
-        `[dbTable::addRows](README.md#dbTable_addRows)` `[dbTable::clear](README.md#dbTable_clear)` `[dbTable::count](README.md#dbTable_count)` `[dbTable::forEach](README.md#dbTable_forEach)` `[dbTable::get](README.md#dbTable_get)` `[dbTable::getAll](README.md#dbTable_getAll)` 
-        `[dbTable::readAndDelete](README.md#dbTable_readAndDelete)` `[dbTable::update](README.md#dbTable_update)` 
+         [addRows](README.md#dbTable_addRows)  [clear](README.md#dbTable_clear)  [count](README.md#dbTable_count)  [forEach](README.md#dbTable_forEach)  [get](README.md#dbTable_get)  [getAll](README.md#dbTable_getAll) 
+         [readAndDelete](README.md#dbTable_readAndDelete)  [update](README.md#dbTable_update) 
 
 
    
     
 ### trait _dataTrait
 
-        `[_dataTrait::guid](README.md#_dataTrait_guid)` `[_dataTrait::isArray](README.md#_dataTrait_isArray)` `[_dataTrait::isFunction](README.md#_dataTrait_isFunction)` `[_dataTrait::isObject](README.md#_dataTrait_isObject)` 
+         [guid](README.md#_dataTrait_guid)  [isArray](README.md#_dataTrait_isArray)  [isFunction](README.md#_dataTrait_isFunction)  [isObject](README.md#_dataTrait_isObject) 
 
     
     
@@ -388,15 +388,15 @@ MIT.
 ## Class sequenceStepper
 
 
-        `[sequenceStepper::_classFactory](README.md#sequenceStepper__classFactory)` `[sequenceStepper::addCommands](README.md#sequenceStepper_addCommands)` 
-        `[sequenceStepper::step](README.md#sequenceStepper_step)` 
+         [_classFactory](README.md#sequenceStepper__classFactory)  [addCommands](README.md#sequenceStepper_addCommands) 
+         [step](README.md#sequenceStepper_step) 
 
 
    
     
 ### trait _dataTrait
 
-        `[_dataTrait::guid](README.md#_dataTrait_guid)` `[_dataTrait::isArray](README.md#_dataTrait_isArray)` `[_dataTrait::isFunction](README.md#_dataTrait_isFunction)` `[_dataTrait::isObject](README.md#_dataTrait_isObject)` 
+         [guid](README.md#_dataTrait_guid)  [isArray](README.md#_dataTrait_isArray)  [isFunction](README.md#_dataTrait_isFunction)  [isObject](README.md#_dataTrait_isObject) 
 
     
     
@@ -417,8 +417,8 @@ MIT.
 ## Class later
 
 
-        `[later::add](README.md#later_add)` `[later::after](README.md#later_after)` `[later::asap](README.md#later_asap)` `[later::every](README.md#later_every)` 
-        `[later::once](README.md#later_once)` `[later::onFrame](README.md#later_onFrame)` `[later::polyfill](README.md#later_polyfill)` `[later::removeFrameFn](README.md#later_removeFrameFn)` 
+         [add](README.md#later_add)  [after](README.md#later_after)  [asap](README.md#later_asap)  [every](README.md#later_every) 
+         [once](README.md#later_once)  [onFrame](README.md#later_onFrame)  [polyfill](README.md#later_polyfill)  [removeFrameFn](README.md#later_removeFrameFn) 
 
 
    
