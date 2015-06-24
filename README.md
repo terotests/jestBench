@@ -254,7 +254,7 @@ MIT.
 
 
    
-## Class jestBench
+#### Class jestBench
 
 
 - [fiddle](README.md#jestBench_fiddle)
@@ -289,7 +289,7 @@ MIT.
    
       
             
-## Class _promise
+#### Class _promise
 
 
 - [all](README.md#_promise_all)
@@ -334,7 +334,7 @@ MIT.
     
       
             
-## Class later
+#### Class later
 
 
 - [add](README.md#later_add)
@@ -364,7 +364,7 @@ MIT.
     
       
             
-## Class _localDB
+#### Class _localDB
 
 
 - [_initDB](README.md#_localDB__initDB)
@@ -395,7 +395,7 @@ MIT.
    
       
             
-## Class dbTable
+#### Class dbTable
 
 
 - [addRows](README.md#dbTable_addRows)
@@ -440,7 +440,7 @@ MIT.
     
       
             
-## Class sequenceStepper
+#### Class sequenceStepper
 
 
 - [_classFactory](README.md#sequenceStepper__classFactory)
@@ -475,7 +475,7 @@ MIT.
     
       
             
-## Class later
+#### Class later
 
 
 - [add](README.md#later_add)
@@ -504,7 +504,7 @@ MIT.
 
 
    
-#### Class jestBench
+# Class jestBench
 
 
 The class has following internal singleton variables:
@@ -742,7 +742,7 @@ return t === Object(t);
    
       
             
-#### Class _promise
+# Class _promise
 
 
 The class has following internal singleton variables:
@@ -1377,7 +1377,7 @@ return obj === Object(obj);
     
       
             
-#### Class later
+# Class later
 
 
 The class has following internal singleton variables:
@@ -1604,7 +1604,7 @@ if(i>=0) {
     
       
             
-#### Class _localDB
+# Class _localDB
 
 
 The class has following internal singleton variables:
@@ -1792,7 +1792,7 @@ return t === Object(t);
    
       
             
-#### Class dbTable
+# Class dbTable
 
 
 The class has following internal singleton variables:
@@ -2101,7 +2101,7 @@ return t === Object(t);
     
       
             
-#### Class sequenceStepper
+# Class sequenceStepper
 
 
 The class has following internal singleton variables:
@@ -2285,7 +2285,7 @@ return t === Object(t);
     
       
             
-#### Class later
+# Class later
 
 
 The class has following internal singleton variables:
