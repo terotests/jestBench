@@ -257,8 +257,8 @@ MIT.
 ## Class jestBench
 
 
- [fiddle](README.md#jestBench_fiddle)  [getDbResults](README.md#jestBench_getDbResults) 
- [runTests](README.md#jestBench_runTests)  [saveToIndexed](README.md#jestBench_saveToIndexed) 
+*[fiddle](README.md#jestBench_fiddle) *[getDbResults](README.md#jestBench_getDbResults) 
+*[runTests](README.md#jestBench_runTests) *[saveToIndexed](README.md#jestBench_saveToIndexed) 
 
 
    
@@ -269,9 +269,9 @@ MIT.
     
     
     
-### trait _dataTrait
+##### trait _dataTrait
 
- [guid](README.md#_dataTrait_guid)  [isArray](README.md#_dataTrait_isArray)  [isFunction](README.md#_dataTrait_isFunction)  [isObject](README.md#_dataTrait_isObject) 
+*[guid](README.md#_dataTrait_guid) *[isArray](README.md#_dataTrait_isArray) *[isFunction](README.md#_dataTrait_isFunction) *[isObject](README.md#_dataTrait_isObject) 
 
     
     
@@ -285,15 +285,15 @@ MIT.
 ## Class _promise
 
 
- [all](README.md#_promise_all)  [collect](README.md#_promise_collect)  [fail](README.md#_promise_fail)  [fulfill](README.md#_promise_fulfill)  [genPlugin](README.md#_promise_genPlugin) 
- [isFulfilled](README.md#_promise_isFulfilled)  [isPending](README.md#_promise_isPending)  [isRejected](README.md#_promise_isRejected)  [nodeStyle](README.md#_promise_nodeStyle)  [onStateChange](README.md#_promise_onStateChange)  [plugin](README.md#_promise_plugin)  [props](README.md#_promise_props)  [reject](README.md#_promise_reject)  [rejectReason](README.md#_promise_rejectReason)  [resolve](README.md#_promise_resolve)  [state](README.md#_promise_state)  [then](README.md#_promise_then)  [triggerStateChange](README.md#_promise_triggerStateChange)  [value](README.md#_promise_value) 
+*[all](README.md#_promise_all) *[collect](README.md#_promise_collect) *[fail](README.md#_promise_fail) *[fulfill](README.md#_promise_fulfill) *[genPlugin](README.md#_promise_genPlugin) 
+*[isFulfilled](README.md#_promise_isFulfilled) *[isPending](README.md#_promise_isPending) *[isRejected](README.md#_promise_isRejected) *[nodeStyle](README.md#_promise_nodeStyle) *[onStateChange](README.md#_promise_onStateChange) *[plugin](README.md#_promise_plugin) *[props](README.md#_promise_props) *[reject](README.md#_promise_reject) *[rejectReason](README.md#_promise_rejectReason) *[resolve](README.md#_promise_resolve) *[state](README.md#_promise_state) *[then](README.md#_promise_then) *[triggerStateChange](README.md#_promise_triggerStateChange) *[value](README.md#_promise_value) 
 
 
    
     
-### trait util_fns
+##### trait util_fns
 
- [isArray](README.md#util_fns_isArray)  [isFunction](README.md#util_fns_isFunction)  [isObject](README.md#util_fns_isObject) 
+*[isArray](README.md#util_fns_isArray) *[isFunction](README.md#util_fns_isFunction) *[isObject](README.md#util_fns_isObject) 
 
     
     
@@ -309,8 +309,8 @@ MIT.
 ## Class later
 
 
- [add](README.md#later_add)  [after](README.md#later_after)  [asap](README.md#later_asap)  [every](README.md#later_every) 
- [once](README.md#later_once)  [onFrame](README.md#later_onFrame)  [polyfill](README.md#later_polyfill)  [removeFrameFn](README.md#later_removeFrameFn) 
+*[add](README.md#later_add) *[after](README.md#later_after) *[asap](README.md#later_asap) *[every](README.md#later_every) 
+*[once](README.md#later_once) *[onFrame](README.md#later_onFrame) *[polyfill](README.md#later_polyfill) *[removeFrameFn](README.md#later_removeFrameFn) 
 
 
    
@@ -332,17 +332,17 @@ MIT.
 ## Class _localDB
 
 
- [_initDB](README.md#_localDB__initDB)  [clearDatabases](README.md#_localDB_clearDatabases)  [createTable](README.md#_localDB_createTable)  [getDB](README.md#_localDB_getDB)  [getStore](README.md#_localDB_getStore) 
- [table](README.md#_localDB_table) 
+*[_initDB](README.md#_localDB__initDB) *[clearDatabases](README.md#_localDB_clearDatabases) *[createTable](README.md#_localDB_createTable) *[getDB](README.md#_localDB_getDB) *[getStore](README.md#_localDB_getStore) 
+*[table](README.md#_localDB_table) 
 
 
    
     
     
     
-### trait _dataTrait
+##### trait _dataTrait
 
- [guid](README.md#_dataTrait_guid)  [isArray](README.md#_dataTrait_isArray)  [isFunction](README.md#_dataTrait_isFunction)  [isObject](README.md#_dataTrait_isObject) 
+*[guid](README.md#_dataTrait_guid) *[isArray](README.md#_dataTrait_isArray) *[isFunction](README.md#_dataTrait_isFunction) *[isObject](README.md#_dataTrait_isObject) 
 
     
     
@@ -354,15 +354,15 @@ MIT.
 ## Class dbTable
 
 
- [addRows](README.md#dbTable_addRows)  [clear](README.md#dbTable_clear)  [count](README.md#dbTable_count)  [forEach](README.md#dbTable_forEach)  [get](README.md#dbTable_get)  [getAll](README.md#dbTable_getAll) 
- [readAndDelete](README.md#dbTable_readAndDelete)  [update](README.md#dbTable_update) 
+*[addRows](README.md#dbTable_addRows) *[clear](README.md#dbTable_clear) *[count](README.md#dbTable_count) *[forEach](README.md#dbTable_forEach) *[get](README.md#dbTable_get) *[getAll](README.md#dbTable_getAll) 
+*[readAndDelete](README.md#dbTable_readAndDelete) *[update](README.md#dbTable_update) 
 
 
    
     
-### trait _dataTrait
+##### trait _dataTrait
 
- [guid](README.md#_dataTrait_guid)  [isArray](README.md#_dataTrait_isArray)  [isFunction](README.md#_dataTrait_isFunction)  [isObject](README.md#_dataTrait_isObject) 
+*[guid](README.md#_dataTrait_guid) *[isArray](README.md#_dataTrait_isArray) *[isFunction](README.md#_dataTrait_isFunction) *[isObject](README.md#_dataTrait_isObject) 
 
     
     
@@ -388,15 +388,15 @@ MIT.
 ## Class sequenceStepper
 
 
- [_classFactory](README.md#sequenceStepper__classFactory)  [addCommands](README.md#sequenceStepper_addCommands) 
- [step](README.md#sequenceStepper_step) 
+*[_classFactory](README.md#sequenceStepper__classFactory) *[addCommands](README.md#sequenceStepper_addCommands) 
+*[step](README.md#sequenceStepper_step) 
 
 
    
     
-### trait _dataTrait
+##### trait _dataTrait
 
- [guid](README.md#_dataTrait_guid)  [isArray](README.md#_dataTrait_isArray)  [isFunction](README.md#_dataTrait_isFunction)  [isObject](README.md#_dataTrait_isObject) 
+*[guid](README.md#_dataTrait_guid) *[isArray](README.md#_dataTrait_isArray) *[isFunction](README.md#_dataTrait_isFunction) *[isObject](README.md#_dataTrait_isObject) 
 
     
     
@@ -417,8 +417,8 @@ MIT.
 ## Class later
 
 
- [add](README.md#later_add)  [after](README.md#later_after)  [asap](README.md#later_asap)  [every](README.md#later_every) 
- [once](README.md#later_once)  [onFrame](README.md#later_onFrame)  [polyfill](README.md#later_polyfill)  [removeFrameFn](README.md#later_removeFrameFn) 
+*[add](README.md#later_add) *[after](README.md#later_after) *[asap](README.md#later_asap) *[every](README.md#later_every) 
+*[once](README.md#later_once) *[onFrame](README.md#later_onFrame) *[polyfill](README.md#later_polyfill) *[removeFrameFn](README.md#later_removeFrameFn) 
 
 
    
@@ -436,7 +436,7 @@ MIT.
 
 
    
-## Class jestBench
+#### Class jestBench
 
 
 The class has following internal singleton variables:
@@ -674,7 +674,7 @@ return t === Object(t);
    
       
             
-## Class _promise
+#### Class _promise
 
 
 The class has following internal singleton variables:
@@ -1309,7 +1309,7 @@ return obj === Object(obj);
     
       
             
-## Class later
+#### Class later
 
 
 The class has following internal singleton variables:
@@ -1536,7 +1536,7 @@ if(i>=0) {
     
       
             
-## Class _localDB
+#### Class _localDB
 
 
 The class has following internal singleton variables:
@@ -1724,7 +1724,7 @@ return t === Object(t);
    
       
             
-## Class dbTable
+#### Class dbTable
 
 
 The class has following internal singleton variables:
@@ -2033,7 +2033,7 @@ return t === Object(t);
     
       
             
-## Class sequenceStepper
+#### Class sequenceStepper
 
 
 The class has following internal singleton variables:
@@ -2217,7 +2217,7 @@ return t === Object(t);
     
       
             
-## Class later
+#### Class later
 
 
 The class has following internal singleton variables:
