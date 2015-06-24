@@ -476,6 +476,8 @@ return t === Object(t);
 
     
     
+    
+    
 
 
    
@@ -2020,6 +2022,228 @@ return t === Object(t);
 
       
     
+      
+    
+      
+            
+## Class later
+
+
+The class has following internal singleton variables:
+        
+* _initDone
+        
+* _callers
+        
+* _oneTimers
+        
+* _everies
+        
+* _framers
+        
+        
+### later::add(fn, thisObj, args)
+
+
+```javascript
+if(thisObj || args) {
+   var tArgs;
+   if( Object.prototype.toString.call( args ) === '[object Array]' ) {
+       tArgs = args;
+   } else {
+       tArgs = Array.prototype.slice.call(arguments, 2);
+       if(!tArgs) tArgs = [];
+   }
+   _callers.push([thisObj, fn, tArgs]);   
+} else {
+    _callers.push(fn);
+}
+```
+
+### later::after(seconds, fn, name)
+
+
+```javascript
+
+if(!name) {
+    name = "time"+(new Date()).getTime()+Math.random(10000000);
+}
+
+_everies[name] = {
+    step : Math.floor(seconds * 1000),
+    fn : fn,
+    nextTime : 0,
+    remove : true
+};
+```
+
+### later::asap(fn)
+
+
+```javascript
+this.add(fn);
+
+```
+
+### later::every(seconds, fn, name)
+
+
+```javascript
+
+if(!name) {
+    name = "time"+(new Date()).getTime()+Math.random(10000000);
+}
+
+_everies[name] = {
+    step : Math.floor(seconds * 1000),
+    fn : fn,
+    nextTime : 0
+};
+```
+
+### later::constructor( interval, fn )
+
+```javascript
+if(!_initDone) {
+    
+   this.polyfill();
+ 
+   var frame, cancelFrame;
+   if(typeof(window) != "undefined") {
+       var frame = window['requestAnimationFrame'], 
+           cancelFrame= window['cancelRequestAnimationFrame'];
+       ['', 'ms', 'moz', 'webkit', 'o'].forEach( function(x) { 
+           if(!frame) {
+            frame = window[x+'RequestAnimationFrame'];
+            cancelFrame = window[x+'CancelAnimationFrame'] 
+                                       || window[x+'CancelRequestAnimationFrame'];
+           }
+        });
+   }
+ 
+    if (!frame)
+        frame= function(cb) {
+            return setTimeout(cb, 16);
+        };
+ 
+    if (!cancelFrame)
+        cancelFrame = function(id) {
+            clearTimeout(id);
+        };    
+        
+    _callers = [];
+    _oneTimers = {};
+    _everies = {};
+    _framers = [];
+    var lastMs = 0;
+    
+    var _callQueQue = function() {
+       var ms = (new Date()).getTime();
+       var fn;
+       while(fn=_callers.shift()) {
+          if(Object.prototype.toString.call( fn ) === '[object Array]' ) {
+              fn[1].apply(fn[0], fn[2]);
+          } else {
+              fn();
+          }
+           
+       }
+       
+       for(var i=0; i<_framers.length;i++) {
+           var fFn = _framers[i];
+           fFn();
+       }
+       
+       for(var n in _oneTimers) {
+           if(_oneTimers.hasOwnProperty(n)) {
+               var v = _oneTimers[n];
+               v[0](v[1]);
+               delete _oneTimers[n];
+           }
+       }
+       
+       for(var n in _everies) {
+           if(_everies.hasOwnProperty(n)) {
+               var v = _everies[n];
+               if(v.nextTime < ms) {
+                   if(v.remove) {
+                       if(v.nextTime > 0) {
+                          v.fn(); 
+                          delete _everies[n];
+                       } else {
+                          v.nextTime = ms + v.step; 
+                       }
+                   } else {
+                       v.fn();
+                       v.nextTime = ms + v.step;
+                   }
+               }
+               if(v.until) {
+                   if(v.until < ms) {
+                       delete _everies[n];
+                   }
+               }
+           }
+       }       
+       
+       frame(_callQueQue);
+       lastMs = ms;
+    };
+    _callQueQue();
+    _initDone = true;
+}
+```
+        
+### later::once(key, fn, value)
+
+
+```javascript
+// _oneTimers
+
+_oneTimers[key] = [fn,value];
+```
+
+### later::onFrame(fn)
+
+
+```javascript
+
+_framers.push(fn);
+```
+
+### later::polyfill(t)
+
+
+```javascript
+
+```
+
+### later::removeFrameFn(fn)
+
+
+```javascript
+
+var i = _framers.indexOf(fn);
+if(i>=0) {
+    if(fn._onRemove) {
+        fn._onRemove();
+    }
+    _framers.splice(i,1);
+    return true;
+} else {
+    return false;
+}
+```
+
+
+
+   
+
+
+   
+
+
+
       
     
 
