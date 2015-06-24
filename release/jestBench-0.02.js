@@ -1833,6 +1833,17 @@
   };
   jestBench.prototype = new jestBench_prototype();
 
+  (function () {
+    if (typeof define !== 'undefined' && define !== null && define.amd != null) {
+      __amdDefs__['jestBench'] = jestBench;
+      this.jestBench = jestBench;
+    } else if (typeof module !== 'undefined' && module !== null && module.exports != null) {
+      module.exports['jestBench'] = jestBench;
+    } else {
+      this.jestBench = jestBench;
+    }
+  }).call(new Function('return this')());
+
   if (typeof define !== 'undefined' && define !== null && define.amd != null) {
     define(__amdDefs__);
   }
