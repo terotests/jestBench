@@ -1305,7 +1305,7 @@ _framers.push(fn);
 
 
 ```javascript
-// --- let's not ---
+
 ```
 
 ### later::removeFrameFn(fn)
@@ -1554,7 +1554,7 @@ transaction.oncomplete = function(event) {
 };
 
 transaction.onerror = function(event) {
-  // Don't forget to handle errors!
+  prom.reject(event);
 };
 
 var objectStore = transaction.objectStore(this._table);
