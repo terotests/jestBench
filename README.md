@@ -241,7 +241,16 @@ MIT.
 
 
 
+
+
+
+
+
+
+
    
+
+ 
 
 
    
@@ -251,7 +260,7 @@ MIT.
 The class has following internal singleton variables:
         
         
-### jestBench::fiddle(options, parentNode)
+### <a name="jestBench::fiddle"></a>jestBench::fiddle(options, parentNode)
 
 
 ```javascript
@@ -304,7 +313,7 @@ s.height = (options.height || 600)+"px";
 return iframe;
 ```
 
-### jestBench::getDbResults(databaseName, callBackFn)
+### <a name="jestBench::getDbResults"></a>jestBench::getDbResults(databaseName, callBackFn)
 
 
 ```javascript
@@ -334,7 +343,7 @@ db.then( function() {
 this._options = options;
 ```
         
-### jestBench::runTests(options)
+### <a name="jestBench::runTests"></a>jestBench::runTests(options)
 
 
 ```javascript
@@ -400,7 +409,7 @@ options.tests.forEach( function(fn) {
 });
 ```
 
-### jestBench::saveToIndexed(databaseName, rows, extra)
+### <a name="jestBench::saveToIndexed"></a>jestBench::saveToIndexed(databaseName, rows, extra)
 
 
 ```javascript
@@ -433,7 +442,7 @@ db.then( function() {
     
     
     
-# trait _dataTrait
+## trait _dataTrait
 
 The class has following internal singleton variables:
         
@@ -442,7 +451,7 @@ The class has following internal singleton variables:
 * _commands
         
         
-### _dataTrait::guid(t)
+### <a name="_dataTrait::guid"></a>_dataTrait::guid(t)
 
 
 ```javascript
@@ -452,21 +461,21 @@ return Math.random().toString(36).substring(2, 15) +
 
 ```
 
-### _dataTrait::isArray(t)
+### <a name="_dataTrait::isArray"></a>_dataTrait::isArray(t)
 
 
 ```javascript
 return Object.prototype.toString.call( t ) === '[object Array]';
 ```
 
-### _dataTrait::isFunction(fn)
+### <a name="_dataTrait::isFunction"></a>_dataTrait::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### _dataTrait::isObject(t)
+### <a name="_dataTrait::isObject"></a>_dataTrait::isObject(t)
 
 
 ```javascript
@@ -489,7 +498,7 @@ return t === Object(t);
 The class has following internal singleton variables:
         
         
-### _promise::all(firstArg)
+### <a name="_promise::all"></a>_promise::all(firstArg)
 
 
 ```javascript
@@ -544,7 +553,7 @@ return this.then(
 
 ```
 
-### _promise::collect(collectFn, promiseList, results)
+### <a name="_promise::collect"></a>_promise::collect(collectFn, promiseList, results)
 
 
 ```javascript
@@ -595,14 +604,14 @@ return this.then(
 
 ```
 
-### _promise::fail(fn)
+### <a name="_promise::fail"></a>_promise::fail(fn)
 
 
 ```javascript
 return this.then(null, fn);
 ```
 
-### _promise::fulfill(withValue)
+### <a name="_promise::fulfill"></a>_promise::fulfill(withValue)
 
 
 ```javascript
@@ -652,7 +661,7 @@ this.triggerStateChange();
 
 ```
 
-### _promise::genPlugin(fname, fn)
+### <a name="_promise::genPlugin"></a>_promise::genPlugin(fname, fn)
 
 
 ```javascript
@@ -711,28 +720,28 @@ if(!onRejected && this.isFunction(onFulfilled) ) {
 }
 ```
         
-### _promise::isFulfilled(t)
+### <a name="_promise::isFulfilled"></a>_promise::isFulfilled(t)
 
 
 ```javascript
 return this._state == 1;
 ```
 
-### _promise::isPending(t)
+### <a name="_promise::isPending"></a>_promise::isPending(t)
 
 
 ```javascript
 return this._state == 0;
 ```
 
-### _promise::isRejected(v)
+### <a name="_promise::isRejected"></a>_promise::isRejected(v)
 
 
 ```javascript
 return this._state == 2;
 ```
 
-### _promise::nodeStyle(fname, fn)
+### <a name="_promise::nodeStyle"></a>_promise::nodeStyle(fname, fn)
 
 
 ```javascript
@@ -803,7 +812,7 @@ this.plugin(fname,
 );
 ```
 
-### _promise::onStateChange(fn)
+### <a name="_promise::onStateChange"></a>_promise::onStateChange(fn)
 
 
 ```javascript
@@ -814,7 +823,7 @@ if(!this._listeners)
 this._listeners.push(fn);
 ```
 
-### _promise::plugin(n, fn)
+### <a name="_promise::plugin"></a>_promise::plugin(n, fn)
 
 
 ```javascript
@@ -824,7 +833,7 @@ _myTrait_[n] = fn;
 return this;
 ```
 
-### _promise::props(obj)
+### <a name="_promise::props"></a>_promise::props(obj)
 
 
 ```javascript
@@ -878,7 +887,7 @@ return this.then(
 
 ```
 
-### _promise::reject(withReason)
+### <a name="_promise::reject"></a>_promise::reject(withReason)
 
 
 ```javascript
@@ -925,7 +934,7 @@ this.triggerStateChange();
 
 ```
 
-### _promise::rejectReason(reason)
+### <a name="_promise::rejectReason"></a>_promise::rejectReason(reason)
 
 
 ```javascript
@@ -936,7 +945,7 @@ if(reason) {
 return this._rejectReason;
 ```
 
-### _promise::resolve(x)
+### <a name="_promise::resolve"></a>_promise::resolve(x)
 
 
 ```javascript
@@ -1015,7 +1024,7 @@ this.fulfill(x);
 
 ```
 
-### _promise::state(newState)
+### <a name="_promise::state"></a>_promise::state(newState)
 
 
 ```javascript
@@ -1025,7 +1034,7 @@ if(typeof(newState)!="undefined") {
 return this._state;
 ```
 
-### _promise::then(onFulfilled, onRejected)
+### <a name="_promise::then"></a>_promise::then(onFulfilled, onRejected)
 
 
 ```javascript
@@ -1052,7 +1061,7 @@ return p;
 
 ```
 
-### _promise::triggerStateChange(t)
+### <a name="_promise::triggerStateChange"></a>_promise::triggerStateChange(t)
 
 
 ```javascript
@@ -1065,7 +1074,7 @@ this._listeners.forEach( function(fn) {
 this._listeners.length = 0;
 ```
 
-### _promise::value(v)
+### <a name="_promise::value"></a>_promise::value(v)
 
 
 ```javascript
@@ -1080,26 +1089,26 @@ return this._stateValue;
 
    
     
-# trait util_fns
+## trait util_fns
 
 The class has following internal singleton variables:
         
         
-### util_fns::isArray(someVar)
+### <a name="util_fns::isArray"></a>util_fns::isArray(someVar)
 
 
 ```javascript
 return Object.prototype.toString.call( someVar ) === '[object Array]';
 ```
 
-### util_fns::isFunction(fn)
+### <a name="util_fns::isFunction"></a>util_fns::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### util_fns::isObject(obj)
+### <a name="util_fns::isObject"></a>util_fns::isObject(obj)
 
 
 ```javascript
@@ -1134,7 +1143,7 @@ The class has following internal singleton variables:
 * _framers
         
         
-### later::add(fn, thisObj, args)
+### <a name="later::add"></a>later::add(fn, thisObj, args)
 
 
 ```javascript
@@ -1152,7 +1161,7 @@ if(thisObj || args) {
 }
 ```
 
-### later::after(seconds, fn, name)
+### <a name="later::after"></a>later::after(seconds, fn, name)
 
 
 ```javascript
@@ -1169,7 +1178,7 @@ _everies[name] = {
 };
 ```
 
-### later::asap(fn)
+### <a name="later::asap"></a>later::asap(fn)
 
 
 ```javascript
@@ -1177,7 +1186,7 @@ this.add(fn);
 
 ```
 
-### later::every(seconds, fn, name)
+### <a name="later::every"></a>later::every(seconds, fn, name)
 
 
 ```javascript
@@ -1286,7 +1295,7 @@ if(!_initDone) {
 }
 ```
         
-### later::once(key, fn, value)
+### <a name="later::once"></a>later::once(key, fn, value)
 
 
 ```javascript
@@ -1295,7 +1304,7 @@ if(!_initDone) {
 _oneTimers[key] = [fn,value];
 ```
 
-### later::onFrame(fn)
+### <a name="later::onFrame"></a>later::onFrame(fn)
 
 
 ```javascript
@@ -1303,14 +1312,14 @@ _oneTimers[key] = [fn,value];
 _framers.push(fn);
 ```
 
-### later::polyfill(t)
+### <a name="later::polyfill"></a>later::polyfill(t)
 
 
 ```javascript
 
 ```
 
-### later::removeFrameFn(fn)
+### <a name="later::removeFrameFn"></a>later::removeFrameFn(fn)
 
 
 ```javascript
@@ -1357,7 +1366,7 @@ The class has following internal singleton variables:
 * _db
         
         
-### _localDB::_initDB(t)
+### <a name="_localDB::_initDB"></a>_localDB::_initDB(t)
 
 
 ```javascript
@@ -1377,7 +1386,7 @@ _dbList = _localDB( "sys.db", {
 });
 ```
 
-### _localDB::clearDatabases(fn)
+### <a name="_localDB::clearDatabases"></a>_localDB::clearDatabases(fn)
 
 
 ```javascript
@@ -1397,7 +1406,7 @@ _dbList.then( function() {
 })
 ```
 
-### _localDB::createTable(name, options)
+### <a name="_localDB::createTable"></a>_localDB::createTable(name, options)
 
 
 ```javascript
@@ -1409,14 +1418,14 @@ return this.table( name );
 
 ```
 
-### _localDB::getDB(t)
+### <a name="_localDB::getDB"></a>_localDB::getDB(t)
 
 
 ```javascript
 return this._db;
 ```
 
-### _localDB::getStore(store_name, mode)
+### <a name="_localDB::getStore"></a>_localDB::getStore(store_name, mode)
 
 
 ```javascript
@@ -1472,7 +1481,7 @@ request.onupgradeneeded = function (event) {
 
 ```
         
-### _localDB::table(name)
+### <a name="_localDB::table"></a>_localDB::table(name)
 
 
 ```javascript
@@ -1485,7 +1494,7 @@ return dbTable(this._db, name);
     
     
     
-# trait _dataTrait
+## trait _dataTrait
 
 The class has following internal singleton variables:
         
@@ -1494,7 +1503,7 @@ The class has following internal singleton variables:
 * _commands
         
         
-### _dataTrait::guid(t)
+### <a name="_dataTrait::guid"></a>_dataTrait::guid(t)
 
 
 ```javascript
@@ -1504,21 +1513,21 @@ return Math.random().toString(36).substring(2, 15) +
 
 ```
 
-### _dataTrait::isArray(t)
+### <a name="_dataTrait::isArray"></a>_dataTrait::isArray(t)
 
 
 ```javascript
 return Object.prototype.toString.call( t ) === '[object Array]';
 ```
 
-### _dataTrait::isFunction(fn)
+### <a name="_dataTrait::isFunction"></a>_dataTrait::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### _dataTrait::isObject(t)
+### <a name="_dataTrait::isObject"></a>_dataTrait::isObject(t)
 
 
 ```javascript
@@ -1539,7 +1548,7 @@ return t === Object(t);
 The class has following internal singleton variables:
         
         
-### dbTable::addRows(rows)
+### <a name="dbTable::addRows"></a>dbTable::addRows(rows)
 
 
 ```javascript
@@ -1570,7 +1579,7 @@ for (var i in rows) {
 return prom;
 ```
 
-### dbTable::clear(t)
+### <a name="dbTable::clear"></a>dbTable::clear(t)
 
 
 ```javascript
@@ -1590,7 +1599,7 @@ return prom;
 
 ```
 
-### dbTable::count(t)
+### <a name="dbTable::count"></a>dbTable::count(t)
 
 
 ```javascript
@@ -1605,7 +1614,7 @@ return prom;
 
 ```
 
-### dbTable::forEach(fn)
+### <a name="dbTable::forEach"></a>dbTable::forEach(fn)
 
 
 ```javascript
@@ -1634,7 +1643,7 @@ cursorRequest.onsuccess = function(evt) {
 
 ```
 
-### dbTable::get(key)
+### <a name="dbTable::get"></a>dbTable::get(key)
 
 
 ```javascript
@@ -1656,7 +1665,7 @@ request.onsuccess = function(event) {
 return prom;
 ```
 
-### dbTable::getAll(t)
+### <a name="dbTable::getAll"></a>dbTable::getAll(t)
 
 
 ```javascript
@@ -1698,7 +1707,7 @@ this._table = tableName;
 
 ```
         
-### dbTable::readAndDelete(t)
+### <a name="dbTable::readAndDelete"></a>dbTable::readAndDelete(t)
 
 
 ```javascript
@@ -1732,7 +1741,7 @@ return prom;
 
 ```
 
-### dbTable::update(key, data)
+### <a name="dbTable::update"></a>dbTable::update(key, data)
 
 
 ```javascript
@@ -1780,7 +1789,7 @@ return prom;
 
    
     
-# trait _dataTrait
+## trait _dataTrait
 
 The class has following internal singleton variables:
         
@@ -1789,7 +1798,7 @@ The class has following internal singleton variables:
 * _commands
         
         
-### _dataTrait::guid(t)
+### <a name="_dataTrait::guid"></a>_dataTrait::guid(t)
 
 
 ```javascript
@@ -1799,21 +1808,21 @@ return Math.random().toString(36).substring(2, 15) +
 
 ```
 
-### _dataTrait::isArray(t)
+### <a name="_dataTrait::isArray"></a>_dataTrait::isArray(t)
 
 
 ```javascript
 return Object.prototype.toString.call( t ) === '[object Array]';
 ```
 
-### _dataTrait::isFunction(fn)
+### <a name="_dataTrait::isFunction"></a>_dataTrait::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### _dataTrait::isObject(t)
+### <a name="_dataTrait::isObject"></a>_dataTrait::isObject(t)
 
 
 ```javascript
@@ -1850,7 +1859,7 @@ The class has following internal singleton variables:
 * _instances
         
         
-### sequenceStepper::_classFactory(id, manual)
+### <a name="sequenceStepper::_classFactory"></a>sequenceStepper::_classFactory(id, manual)
 
 
 ```javascript
@@ -1868,7 +1877,7 @@ if(_instances[id]) {
 }
 ```
 
-### sequenceStepper::addCommands(cmdFunction, failure)
+### <a name="sequenceStepper::addCommands"></a>sequenceStepper::addCommands(cmdFunction, failure)
 
 
 ```javascript
@@ -1906,7 +1915,7 @@ if(!manual) {
 
 ```
         
-### sequenceStepper::step(t)
+### <a name="sequenceStepper::step"></a>sequenceStepper::step(t)
 
 
 ```javascript
@@ -1969,7 +1978,7 @@ return myPromise;
 
    
     
-# trait _dataTrait
+## trait _dataTrait
 
 The class has following internal singleton variables:
         
@@ -1978,7 +1987,7 @@ The class has following internal singleton variables:
 * _commands
         
         
-### _dataTrait::guid(t)
+### <a name="_dataTrait::guid"></a>_dataTrait::guid(t)
 
 
 ```javascript
@@ -1988,21 +1997,21 @@ return Math.random().toString(36).substring(2, 15) +
 
 ```
 
-### _dataTrait::isArray(t)
+### <a name="_dataTrait::isArray"></a>_dataTrait::isArray(t)
 
 
 ```javascript
 return Object.prototype.toString.call( t ) === '[object Array]';
 ```
 
-### _dataTrait::isFunction(fn)
+### <a name="_dataTrait::isFunction"></a>_dataTrait::isFunction(fn)
 
 
 ```javascript
 return Object.prototype.toString.call(fn) == '[object Function]';
 ```
 
-### _dataTrait::isObject(t)
+### <a name="_dataTrait::isObject"></a>_dataTrait::isObject(t)
 
 
 ```javascript
@@ -2042,7 +2051,7 @@ The class has following internal singleton variables:
 * _framers
         
         
-### later::add(fn, thisObj, args)
+### <a name="later::add"></a>later::add(fn, thisObj, args)
 
 
 ```javascript
@@ -2060,7 +2069,7 @@ if(thisObj || args) {
 }
 ```
 
-### later::after(seconds, fn, name)
+### <a name="later::after"></a>later::after(seconds, fn, name)
 
 
 ```javascript
@@ -2077,7 +2086,7 @@ _everies[name] = {
 };
 ```
 
-### later::asap(fn)
+### <a name="later::asap"></a>later::asap(fn)
 
 
 ```javascript
@@ -2085,7 +2094,7 @@ this.add(fn);
 
 ```
 
-### later::every(seconds, fn, name)
+### <a name="later::every"></a>later::every(seconds, fn, name)
 
 
 ```javascript
@@ -2194,7 +2203,7 @@ if(!_initDone) {
 }
 ```
         
-### later::once(key, fn, value)
+### <a name="later::once"></a>later::once(key, fn, value)
 
 
 ```javascript
@@ -2203,7 +2212,7 @@ if(!_initDone) {
 _oneTimers[key] = [fn,value];
 ```
 
-### later::onFrame(fn)
+### <a name="later::onFrame"></a>later::onFrame(fn)
 
 
 ```javascript
@@ -2211,14 +2220,14 @@ _oneTimers[key] = [fn,value];
 _framers.push(fn);
 ```
 
-### later::polyfill(t)
+### <a name="later::polyfill"></a>later::polyfill(t)
 
 
 ```javascript
 
 ```
 
-### later::removeFrameFn(fn)
+### <a name="later::removeFrameFn"></a>later::removeFrameFn(fn)
 
 
 ```javascript
