@@ -1023,7 +1023,9 @@
               prom.resolve(true);
             };
 
-            transaction.onerror = function (event) {};
+            transaction.onerror = function (event) {
+              prom.reject(event);
+            };
 
             var objectStore = transaction.objectStore(this._table);
             for (var i in rows) {
@@ -1848,9 +1850,5 @@
     define(__amdDefs__);
   }
 }).call(new Function('return this')());
-
-// --- let's not ---
-
-// Don't forget to handle errors!
 
 // console.log("Row ",i," written succesfully");
