@@ -257,6 +257,338 @@ MIT.
 ## Class jestBench
 
 
+        
+- [jestBench::fiddle](#jestBench::fiddle)(options, parentNode)
+
+- [jestBench::getDbResults](#jestBench::getDbResults)(databaseName, callBackFn)
+
+        
+- [jestBench::runTests](#jestBench::runTests)(options)
+
+- [jestBench::saveToIndexed](#jestBench::saveToIndexed)(databaseName, rows, extra)
+
+
+
+   
+    
+    
+    
+    
+    
+    
+    
+### trait _dataTrait
+
+        
+- [_dataTrait::guid](#_dataTrait::guid)(t)
+
+- [_dataTrait::isArray](#_dataTrait::isArray)(t)
+
+- [_dataTrait::isFunction](#_dataTrait::isFunction)(fn)
+
+- [_dataTrait::isObject](#_dataTrait::isObject)(t)
+
+
+    
+    
+    
+    
+
+
+   
+      
+            
+## Class _promise
+
+
+        
+- [_promise::all](#_promise::all)(firstArg)
+
+- [_promise::collect](#_promise::collect)(collectFn, promiseList, results)
+
+- [_promise::fail](#_promise::fail)(fn)
+
+- [_promise::fulfill](#_promise::fulfill)(withValue)
+
+- [_promise::genPlugin](#_promise::genPlugin)(fname, fn)
+
+        
+- [_promise::isFulfilled](#_promise::isFulfilled)(t)
+
+- [_promise::isPending](#_promise::isPending)(t)
+
+- [_promise::isRejected](#_promise::isRejected)(v)
+
+- [_promise::nodeStyle](#_promise::nodeStyle)(fname, fn)
+
+- [_promise::onStateChange](#_promise::onStateChange)(fn)
+
+- [_promise::plugin](#_promise::plugin)(n, fn)
+
+- [_promise::props](#_promise::props)(obj)
+
+- [_promise::reject](#_promise::reject)(withReason)
+
+- [_promise::rejectReason](#_promise::rejectReason)(reason)
+
+- [_promise::resolve](#_promise::resolve)(x)
+
+- [_promise::state](#_promise::state)(newState)
+
+- [_promise::then](#_promise::then)(onFulfilled, onRejected)
+
+- [_promise::triggerStateChange](#_promise::triggerStateChange)(t)
+
+- [_promise::value](#_promise::value)(v)
+
+
+
+   
+    
+### trait util_fns
+
+        
+- [util_fns::isArray](#util_fns::isArray)(someVar)
+
+- [util_fns::isFunction](#util_fns::isFunction)(fn)
+
+- [util_fns::isObject](#util_fns::isObject)(obj)
+
+
+    
+    
+    
+    
+
+
+   
+      
+    
+      
+            
+## Class later
+
+
+        
+- [later::add](#later::add)(fn, thisObj, args)
+
+- [later::after](#later::after)(seconds, fn, name)
+
+- [later::asap](#later::asap)(fn)
+
+- [later::every](#later::every)(seconds, fn, name)
+
+        
+- [later::once](#later::once)(key, fn, value)
+
+- [later::onFrame](#later::onFrame)(fn)
+
+- [later::polyfill](#later::polyfill)(t)
+
+- [later::removeFrameFn](#later::removeFrameFn)(fn)
+
+
+
+   
+
+
+   
+
+
+
+      
+    
+
+
+
+      
+    
+      
+            
+## Class _localDB
+
+
+        
+- [_localDB::_initDB](#_localDB::_initDB)(t)
+
+- [_localDB::clearDatabases](#_localDB::clearDatabases)(fn)
+
+- [_localDB::createTable](#_localDB::createTable)(name, options)
+
+- [_localDB::getDB](#_localDB::getDB)(t)
+
+- [_localDB::getStore](#_localDB::getStore)(store_name, mode)
+
+        
+- [_localDB::table](#_localDB::table)(name)
+
+
+
+   
+    
+    
+    
+### trait _dataTrait
+
+        
+- [_dataTrait::guid](#_dataTrait::guid)(t)
+
+- [_dataTrait::isArray](#_dataTrait::isArray)(t)
+
+- [_dataTrait::isFunction](#_dataTrait::isFunction)(fn)
+
+- [_dataTrait::isObject](#_dataTrait::isObject)(t)
+
+
+    
+    
+
+
+   
+      
+            
+## Class dbTable
+
+
+        
+- [dbTable::addRows](#dbTable::addRows)(rows)
+
+- [dbTable::clear](#dbTable::clear)(t)
+
+- [dbTable::count](#dbTable::count)(t)
+
+- [dbTable::forEach](#dbTable::forEach)(fn)
+
+- [dbTable::get](#dbTable::get)(key)
+
+- [dbTable::getAll](#dbTable::getAll)(t)
+
+        
+- [dbTable::readAndDelete](#dbTable::readAndDelete)(t)
+
+- [dbTable::update](#dbTable::update)(key, data)
+
+
+
+   
+    
+### trait _dataTrait
+
+        
+- [_dataTrait::guid](#_dataTrait::guid)(t)
+
+- [_dataTrait::isArray](#_dataTrait::isArray)(t)
+
+- [_dataTrait::isFunction](#_dataTrait::isFunction)(fn)
+
+- [_dataTrait::isObject](#_dataTrait::isObject)(t)
+
+
+    
+    
+
+
+   
+      
+    
+
+
+
+      
+    
+      
+    
+
+
+
+      
+    
+      
+            
+## Class sequenceStepper
+
+
+        
+- [sequenceStepper::_classFactory](#sequenceStepper::_classFactory)(id, manual)
+
+- [sequenceStepper::addCommands](#sequenceStepper::addCommands)(cmdFunction, failure)
+
+        
+- [sequenceStepper::step](#sequenceStepper::step)(t)
+
+
+
+   
+    
+### trait _dataTrait
+
+        
+- [_dataTrait::guid](#_dataTrait::guid)(t)
+
+- [_dataTrait::isArray](#_dataTrait::isArray)(t)
+
+- [_dataTrait::isFunction](#_dataTrait::isFunction)(fn)
+
+- [_dataTrait::isObject](#_dataTrait::isObject)(t)
+
+
+    
+    
+
+
+   
+      
+    
+
+
+
+      
+    
+      
+    
+      
+            
+## Class later
+
+
+        
+- [later::add](#later::add)(fn, thisObj, args)
+
+- [later::after](#later::after)(seconds, fn, name)
+
+- [later::asap](#later::asap)(fn)
+
+- [later::every](#later::every)(seconds, fn, name)
+
+        
+- [later::once](#later::once)(key, fn, value)
+
+- [later::onFrame](#later::onFrame)(fn)
+
+- [later::polyfill](#later::polyfill)(t)
+
+- [later::removeFrameFn](#later::removeFrameFn)(fn)
+
+
+
+   
+
+
+   
+
+
+
+      
+    
+
+
+
+
+
+   
+## Class jestBench
+
+
 The class has following internal singleton variables:
         
         
