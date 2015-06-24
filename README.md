@@ -259,7 +259,6 @@ MIT.
 
 - [fiddle](README.md#jestBench_fiddle)
 - [getDbResults](README.md#jestBench_getDbResults)
-
 - [runTests](README.md#jestBench_runTests)
 - [saveToIndexed](README.md#jestBench_saveToIndexed)
 
@@ -298,7 +297,6 @@ MIT.
 - [fail](README.md#_promise_fail)
 - [fulfill](README.md#_promise_fulfill)
 - [genPlugin](README.md#_promise_genPlugin)
-
 - [isFulfilled](README.md#_promise_isFulfilled)
 - [isPending](README.md#_promise_isPending)
 - [isRejected](README.md#_promise_isRejected)
@@ -343,7 +341,6 @@ MIT.
 - [after](README.md#later_after)
 - [asap](README.md#later_asap)
 - [every](README.md#later_every)
-
 - [once](README.md#later_once)
 - [onFrame](README.md#later_onFrame)
 - [polyfill](README.md#later_polyfill)
@@ -375,7 +372,6 @@ MIT.
 - [createTable](README.md#_localDB_createTable)
 - [getDB](README.md#_localDB_getDB)
 - [getStore](README.md#_localDB_getStore)
-
 - [table](README.md#_localDB_table)
 
 
@@ -408,7 +404,6 @@ MIT.
 - [forEach](README.md#dbTable_forEach)
 - [get](README.md#dbTable_get)
 - [getAll](README.md#dbTable_getAll)
-
 - [readAndDelete](README.md#dbTable_readAndDelete)
 - [update](README.md#dbTable_update)
 
@@ -450,7 +445,6 @@ MIT.
 
 - [_classFactory](README.md#sequenceStepper__classFactory)
 - [addCommands](README.md#sequenceStepper_addCommands)
-
 - [step](README.md#sequenceStepper_step)
 
 
@@ -488,7 +482,6 @@ MIT.
 - [after](README.md#later_after)
 - [asap](README.md#later_asap)
 - [every](README.md#later_every)
-
 - [once](README.md#later_once)
 - [onFrame](README.md#later_onFrame)
 - [polyfill](README.md#later_polyfill)
