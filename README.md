@@ -258,14 +258,14 @@ MIT.
 
 
         
-- [jestBench::fiddle](#jestBench::fiddle)(options, parentNode)
+- [jestBench::fiddle](readme.md#jestBench::fiddle)(options, parentNode)
 
-- [jestBench::getDbResults](#jestBench::getDbResults)(databaseName, callBackFn)
+- [jestBench::getDbResults](readme.md#jestBench::getDbResults)(databaseName, callBackFn)
 
         
-- [jestBench::runTests](#jestBench::runTests)(options)
+- [jestBench::runTests](readme.md#jestBench::runTests)(options)
 
-- [jestBench::saveToIndexed](#jestBench::saveToIndexed)(databaseName, rows, extra)
+- [jestBench::saveToIndexed](readme.md#jestBench::saveToIndexed)(databaseName, rows, extra)
 
 
 
@@ -280,13 +280,13 @@ MIT.
 ### trait _dataTrait
 
         
-- [_dataTrait::guid](#_dataTrait::guid)(t)
+- [_dataTrait::guid](readme.md#_dataTrait::guid)(t)
 
-- [_dataTrait::isArray](#_dataTrait::isArray)(t)
+- [_dataTrait::isArray](readme.md#_dataTrait::isArray)(t)
 
-- [_dataTrait::isFunction](#_dataTrait::isFunction)(fn)
+- [_dataTrait::isFunction](readme.md#_dataTrait::isFunction)(fn)
 
-- [_dataTrait::isObject](#_dataTrait::isObject)(t)
+- [_dataTrait::isObject](readme.md#_dataTrait::isObject)(t)
 
 
     
@@ -302,44 +302,44 @@ MIT.
 
 
         
-- [_promise::all](#_promise::all)(firstArg)
+- [_promise::all](readme.md#_promise::all)(firstArg)
 
-- [_promise::collect](#_promise::collect)(collectFn, promiseList, results)
+- [_promise::collect](readme.md#_promise::collect)(collectFn, promiseList, results)
 
-- [_promise::fail](#_promise::fail)(fn)
+- [_promise::fail](readme.md#_promise::fail)(fn)
 
-- [_promise::fulfill](#_promise::fulfill)(withValue)
+- [_promise::fulfill](readme.md#_promise::fulfill)(withValue)
 
-- [_promise::genPlugin](#_promise::genPlugin)(fname, fn)
+- [_promise::genPlugin](readme.md#_promise::genPlugin)(fname, fn)
 
         
-- [_promise::isFulfilled](#_promise::isFulfilled)(t)
+- [_promise::isFulfilled](readme.md#_promise::isFulfilled)(t)
 
-- [_promise::isPending](#_promise::isPending)(t)
+- [_promise::isPending](readme.md#_promise::isPending)(t)
 
-- [_promise::isRejected](#_promise::isRejected)(v)
+- [_promise::isRejected](readme.md#_promise::isRejected)(v)
 
-- [_promise::nodeStyle](#_promise::nodeStyle)(fname, fn)
+- [_promise::nodeStyle](readme.md#_promise::nodeStyle)(fname, fn)
 
-- [_promise::onStateChange](#_promise::onStateChange)(fn)
+- [_promise::onStateChange](readme.md#_promise::onStateChange)(fn)
 
-- [_promise::plugin](#_promise::plugin)(n, fn)
+- [_promise::plugin](readme.md#_promise::plugin)(n, fn)
 
-- [_promise::props](#_promise::props)(obj)
+- [_promise::props](readme.md#_promise::props)(obj)
 
-- [_promise::reject](#_promise::reject)(withReason)
+- [_promise::reject](readme.md#_promise::reject)(withReason)
 
-- [_promise::rejectReason](#_promise::rejectReason)(reason)
+- [_promise::rejectReason](readme.md#_promise::rejectReason)(reason)
 
-- [_promise::resolve](#_promise::resolve)(x)
+- [_promise::resolve](readme.md#_promise::resolve)(x)
 
-- [_promise::state](#_promise::state)(newState)
+- [_promise::state](readme.md#_promise::state)(newState)
 
-- [_promise::then](#_promise::then)(onFulfilled, onRejected)
+- [_promise::then](readme.md#_promise::then)(onFulfilled, onRejected)
 
-- [_promise::triggerStateChange](#_promise::triggerStateChange)(t)
+- [_promise::triggerStateChange](readme.md#_promise::triggerStateChange)(t)
 
-- [_promise::value](#_promise::value)(v)
+- [_promise::value](readme.md#_promise::value)(v)
 
 
 
@@ -348,11 +348,11 @@ MIT.
 ### trait util_fns
 
         
-- [util_fns::isArray](#util_fns::isArray)(someVar)
+- [util_fns::isArray](readme.md#util_fns::isArray)(someVar)
 
-- [util_fns::isFunction](#util_fns::isFunction)(fn)
+- [util_fns::isFunction](readme.md#util_fns::isFunction)(fn)
 
-- [util_fns::isObject](#util_fns::isObject)(obj)
+- [util_fns::isObject](readme.md#util_fns::isObject)(obj)
 
 
     
@@ -370,22 +370,22 @@ MIT.
 
 
         
-- [later::add](#later::add)(fn, thisObj, args)
+- [later::add](readme.md#later::add)(fn, thisObj, args)
 
-- [later::after](#later::after)(seconds, fn, name)
+- [later::after](readme.md#later::after)(seconds, fn, name)
 
-- [later::asap](#later::asap)(fn)
+- [later::asap](readme.md#later::asap)(fn)
 
-- [later::every](#later::every)(seconds, fn, name)
+- [later::every](readme.md#later::every)(seconds, fn, name)
 
         
-- [later::once](#later::once)(key, fn, value)
+- [later::once](readme.md#later::once)(key, fn, value)
 
-- [later::onFrame](#later::onFrame)(fn)
+- [later::onFrame](readme.md#later::onFrame)(fn)
 
-- [later::polyfill](#later::polyfill)(t)
+- [later::polyfill](readme.md#later::polyfill)(t)
 
-- [later::removeFrameFn](#later::removeFrameFn)(fn)
+- [later::removeFrameFn](readme.md#later::removeFrameFn)(fn)
 
 
 
@@ -409,18 +409,18 @@ MIT.
 
 
         
-- [_localDB::_initDB](#_localDB::_initDB)(t)
+- [_localDB::_initDB](readme.md#_localDB::_initDB)(t)
 
-- [_localDB::clearDatabases](#_localDB::clearDatabases)(fn)
+- [_localDB::clearDatabases](readme.md#_localDB::clearDatabases)(fn)
 
-- [_localDB::createTable](#_localDB::createTable)(name, options)
+- [_localDB::createTable](readme.md#_localDB::createTable)(name, options)
 
-- [_localDB::getDB](#_localDB::getDB)(t)
+- [_localDB::getDB](readme.md#_localDB::getDB)(t)
 
-- [_localDB::getStore](#_localDB::getStore)(store_name, mode)
+- [_localDB::getStore](readme.md#_localDB::getStore)(store_name, mode)
 
         
-- [_localDB::table](#_localDB::table)(name)
+- [_localDB::table](readme.md#_localDB::table)(name)
 
 
 
@@ -431,13 +431,13 @@ MIT.
 ### trait _dataTrait
 
         
-- [_dataTrait::guid](#_dataTrait::guid)(t)
+- [_dataTrait::guid](readme.md#_dataTrait::guid)(t)
 
-- [_dataTrait::isArray](#_dataTrait::isArray)(t)
+- [_dataTrait::isArray](readme.md#_dataTrait::isArray)(t)
 
-- [_dataTrait::isFunction](#_dataTrait::isFunction)(fn)
+- [_dataTrait::isFunction](readme.md#_dataTrait::isFunction)(fn)
 
-- [_dataTrait::isObject](#_dataTrait::isObject)(t)
+- [_dataTrait::isObject](readme.md#_dataTrait::isObject)(t)
 
 
     
@@ -451,22 +451,22 @@ MIT.
 
 
         
-- [dbTable::addRows](#dbTable::addRows)(rows)
+- [dbTable::addRows](readme.md#dbTable::addRows)(rows)
 
-- [dbTable::clear](#dbTable::clear)(t)
+- [dbTable::clear](readme.md#dbTable::clear)(t)
 
-- [dbTable::count](#dbTable::count)(t)
+- [dbTable::count](readme.md#dbTable::count)(t)
 
-- [dbTable::forEach](#dbTable::forEach)(fn)
+- [dbTable::forEach](readme.md#dbTable::forEach)(fn)
 
-- [dbTable::get](#dbTable::get)(key)
+- [dbTable::get](readme.md#dbTable::get)(key)
 
-- [dbTable::getAll](#dbTable::getAll)(t)
+- [dbTable::getAll](readme.md#dbTable::getAll)(t)
 
         
-- [dbTable::readAndDelete](#dbTable::readAndDelete)(t)
+- [dbTable::readAndDelete](readme.md#dbTable::readAndDelete)(t)
 
-- [dbTable::update](#dbTable::update)(key, data)
+- [dbTable::update](readme.md#dbTable::update)(key, data)
 
 
 
@@ -475,13 +475,13 @@ MIT.
 ### trait _dataTrait
 
         
-- [_dataTrait::guid](#_dataTrait::guid)(t)
+- [_dataTrait::guid](readme.md#_dataTrait::guid)(t)
 
-- [_dataTrait::isArray](#_dataTrait::isArray)(t)
+- [_dataTrait::isArray](readme.md#_dataTrait::isArray)(t)
 
-- [_dataTrait::isFunction](#_dataTrait::isFunction)(fn)
+- [_dataTrait::isFunction](readme.md#_dataTrait::isFunction)(fn)
 
-- [_dataTrait::isObject](#_dataTrait::isObject)(t)
+- [_dataTrait::isObject](readme.md#_dataTrait::isObject)(t)
 
 
     
@@ -509,12 +509,12 @@ MIT.
 
 
         
-- [sequenceStepper::_classFactory](#sequenceStepper::_classFactory)(id, manual)
+- [sequenceStepper::_classFactory](readme.md#sequenceStepper::_classFactory)(id, manual)
 
-- [sequenceStepper::addCommands](#sequenceStepper::addCommands)(cmdFunction, failure)
+- [sequenceStepper::addCommands](readme.md#sequenceStepper::addCommands)(cmdFunction, failure)
 
         
-- [sequenceStepper::step](#sequenceStepper::step)(t)
+- [sequenceStepper::step](readme.md#sequenceStepper::step)(t)
 
 
 
@@ -523,13 +523,13 @@ MIT.
 ### trait _dataTrait
 
         
-- [_dataTrait::guid](#_dataTrait::guid)(t)
+- [_dataTrait::guid](readme.md#_dataTrait::guid)(t)
 
-- [_dataTrait::isArray](#_dataTrait::isArray)(t)
+- [_dataTrait::isArray](readme.md#_dataTrait::isArray)(t)
 
-- [_dataTrait::isFunction](#_dataTrait::isFunction)(fn)
+- [_dataTrait::isFunction](readme.md#_dataTrait::isFunction)(fn)
 
-- [_dataTrait::isObject](#_dataTrait::isObject)(t)
+- [_dataTrait::isObject](readme.md#_dataTrait::isObject)(t)
 
 
     
@@ -552,22 +552,22 @@ MIT.
 
 
         
-- [later::add](#later::add)(fn, thisObj, args)
+- [later::add](readme.md#later::add)(fn, thisObj, args)
 
-- [later::after](#later::after)(seconds, fn, name)
+- [later::after](readme.md#later::after)(seconds, fn, name)
 
-- [later::asap](#later::asap)(fn)
+- [later::asap](readme.md#later::asap)(fn)
 
-- [later::every](#later::every)(seconds, fn, name)
+- [later::every](readme.md#later::every)(seconds, fn, name)
 
         
-- [later::once](#later::once)(key, fn, value)
+- [later::once](readme.md#later::once)(key, fn, value)
 
-- [later::onFrame](#later::onFrame)(fn)
+- [later::onFrame](readme.md#later::onFrame)(fn)
 
-- [later::polyfill](#later::polyfill)(t)
+- [later::polyfill](readme.md#later::polyfill)(t)
 
-- [later::removeFrameFn](#later::removeFrameFn)(fn)
+- [later::removeFrameFn](readme.md#later::removeFrameFn)(fn)
 
 
 
