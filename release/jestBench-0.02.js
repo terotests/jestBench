@@ -1008,6 +1008,62 @@
           // Initialize static variables here...
 
           /**
+           * @param float mode
+           * @param float usingIndex
+           * @param float actionFn
+           */
+          _myTrait_._cursorAction = function (mode, usingIndex, actionFn) {
+
+            var prom = _promise();
+
+            var trans = this._db.transaction(this._table, mode);
+            var store = trans.objectStore(this._table);
+            var cursorRequest;
+
+            if (usingIndex) {
+
+              var singleKeyRange, indexName;
+
+              // BUG or FEATURE: currently accepts only one key like
+              // { folderName : "data" };
+              for (var n in usingIndex) {
+                if (usingIndex.hasOwnProperty(n)) {
+                  indexName = n;
+                  singleKeyRange = IDBKeyRange.only(usingIndex[n]);
+                }
+              }
+
+              if (indexName) {
+                var index = store.index(indexName); // open using the index only
+                cursorRequest = index.openCursor(singleKeyRange);
+              } else {
+                prom.reject('invalid index key');
+                return;
+              }
+            } else {
+              cursorRequest = store.openCursor();
+            }
+
+            trans.oncomplete = function (evt) {
+              prom.resolve(true);
+            };
+
+            cursorRequest.onerror = function (error) {
+              console.log(error);
+            };
+
+            cursorRequest.onsuccess = function (evt) {
+              var cursor = evt.target.result;
+              if (cursor) {
+                actionFn(cursor);
+                cursor['continue']();
+              }
+            };
+
+            return prom;
+          };
+
+          /**
            * @param float rows
            */
           _myTrait_.addRows = function (rows) {
@@ -1070,29 +1126,14 @@
           };
 
           /**
-           * @param float fn
+           * @param function fn
+           * @param float usingIndex
            */
-          _myTrait_.forEach = function (fn) {
+          _myTrait_.forEach = function (fn, usingIndex) {
 
-            var trans = this._db.transaction(this._table, 'readwrite');
-            var store = trans.objectStore(this._table);
-            var items = [];
-
-            trans.oncomplete = function (evt) {};
-
-            var cursorRequest = store.openCursor();
-
-            cursorRequest.onerror = function (error) {
-              console.log(error);
-            };
-
-            cursorRequest.onsuccess = function (evt) {
-              var cursor = evt.target.result;
-              if (cursor) {
-                fn(cursor.value, cursor);
-                cursor['continue']();
-              }
-            };
+            return this._cursorAction('readonly', usingIndex, function (cursor) {
+              fn(cursor.value, cursor);
+            });
           };
 
           /**
@@ -1118,35 +1159,20 @@
           };
 
           /**
-           * @param float t
+           * @param float usingIndex
            */
-          _myTrait_.getAll = function (t) {
+          _myTrait_.getAll = function (usingIndex) {
 
-            var prom = _promise();
+            var items = [],
+                me = this;
 
-            var trans = this._db.transaction(this._table, 'readonly');
-            var store = trans.objectStore(this._table);
-            var items = [];
-
-            trans.oncomplete = function (evt) {
-              prom.resolve(items);
-            };
-
-            var cursorRequest = store.openCursor();
-
-            cursorRequest.onerror = function (error) {
-              console.log(error);
-            };
-
-            cursorRequest.onsuccess = function (evt) {
-              var cursor = evt.target.result;
-              if (cursor) {
+            return _promise(function (result, fail) {
+              me._cursorAction('readonly', usingIndex, function (cursor) {
                 items.push(cursor.value);
-                cursor['continue']();
-              }
-            };
-
-            return prom;
+              }).then(function () {
+                result(items);
+              }).fail(fail);
+            });
           };
 
           if (_myTrait_.__traitInit && !_myTrait_.hasOwnProperty('__traitInit')) _myTrait_.__traitInit = _myTrait_.__traitInit.slice();
@@ -1158,36 +1184,35 @@
           });
 
           /**
-           * @param float t
+           * @param float usingIndex
            */
-          _myTrait_.readAndDelete = function (t) {
+          _myTrait_.readAndDelete = function (usingIndex) {
+            var items = [],
+                me = this;
 
-            var prom = _promise();
-
-            var trans = this._db.transaction(this._table, 'readwrite');
-            var store = trans.objectStore(this._table);
-            var items = [];
-
-            trans.oncomplete = function (evt) {
-              prom.resolve(items);
-            };
-
-            var cursorRequest = store.openCursor();
-
-            cursorRequest.onerror = function (error) {
-              console.log(error);
-            };
-
-            cursorRequest.onsuccess = function (evt) {
-              var cursor = evt.target.result;
-              if (cursor) {
+            return _promise(function (result, fail) {
+              me._cursorAction('readwrite', usingIndex, function (cursor) {
                 items.push(cursor.value);
                 cursor['delete'](); // remove the key and continue...
-                cursor['continue']();
-              }
-            };
+              }).then(function () {
+                result(items);
+              }).fail(fail);
+            });
+          };
 
-            return prom;
+          /**
+           * @param Object usingIndex  - optional : { keyName : valueString}
+           */
+          _myTrait_.remove = function (usingIndex) {
+            var me = this;
+
+            return _promise(function (result, fail) {
+              me._cursorAction('readwrite', usingIndex, function (cursor) {
+                cursor['delete'](); // remove the key and continue...
+              }).then(function () {
+                result(true);
+              }).fail(fail);
+            });
           };
 
           /**
@@ -1280,7 +1305,7 @@
         _myTrait_._initDB = function (t) {
 
           if (_db) return;
-          // In the following line, you should include the prefixes of implementations you want to test.
+          // if you want experimental support, enable browser based prefixes
           _db = window.indexedDB; //  || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
           _initDone = true;
@@ -1299,14 +1324,11 @@
          * @param float fn
          */
         _myTrait_.clearDatabases = function (fn) {
-          // console.log("Clear databases called ");
 
           _dbList.then(function () {
             var dbs = _dbList.table('databases');
-            // console.log(" --- reading --- ");
             dbs.forEach(function (data, cursor) {
               if (fn(data)) {
-                // console.log("Trying to delete ", data.name);
                 _db.deleteDatabase(data.name);
                 cursor['delete']();
               }
@@ -1315,30 +1337,10 @@
         };
 
         /**
-         * @param float name
-         * @param float options
-         */
-        _myTrait_.createTable = function (name, options) {
-
-          var objectStore = this._db.createObjectStore(name, options);
-
-          return this.table(name);
-        };
-
-        /**
          * @param float t
          */
         _myTrait_.getDB = function (t) {
           return this._db;
-        };
-
-        /**
-         * @param float store_name
-         * @param float mode
-         */
-        _myTrait_.getStore = function (store_name, mode) {
-          var tx = this._db.transaction(store_name, mode);
-          return tx.objectStore(store_name);
         };
 
         if (_myTrait_.__traitInit && !_myTrait_.hasOwnProperty('__traitInit')) _myTrait_.__traitInit = _myTrait_.__traitInit.slice();
@@ -1382,6 +1384,15 @@
                   var opts = options.tables[n];
                   // Create another object store called "names" with the autoIncrement flag set as true.   
                   var objStore = db.createObjectStore(n, opts.createOptions);
+
+                  if (opts.indexes) {
+                    for (var iName in opts.indexes) {
+                      if (opts.indexes.hasOwnProperty(iName)) {
+                        var iData = opts.indexes[iName];
+                        objStore.createIndex(iName, iName, iData);
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -1894,6 +1905,7 @@
           var waitFor = function waitFor() {
             var res;
             if (res = ls.getItem(myId)) {
+              ls.removeItem(myId);
               later().removeFrameFn(waitFor);
               options.onReady(JSON.parse(res));
             }
@@ -2093,4 +2105,8 @@
   }
 }).call(new Function('return this')());
 
+// --- let's not ---
+
 // console.log("Row ",i," written succesfully");
+
+// --- let's not ---

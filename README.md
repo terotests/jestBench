@@ -369,9 +369,7 @@ MIT.
 
 - [_initDB](README.md#_localDB__initDB)
 - [clearDatabases](README.md#_localDB_clearDatabases)
-- [createTable](README.md#_localDB_createTable)
 - [getDB](README.md#_localDB_getDB)
-- [getStore](README.md#_localDB_getStore)
 - [table](README.md#_localDB_table)
 
 
@@ -398,6 +396,7 @@ MIT.
 #### Class dbTable
 
 
+- [_cursorAction](README.md#dbTable__cursorAction)
 - [addRows](README.md#dbTable_addRows)
 - [clear](README.md#dbTable_clear)
 - [count](README.md#dbTable_count)
@@ -405,6 +404,7 @@ MIT.
 - [get](README.md#dbTable_get)
 - [getAll](README.md#dbTable_getAll)
 - [readAndDelete](README.md#dbTable_readAndDelete)
+- [remove](README.md#dbTable_remove)
 - [update](README.md#dbTable_update)
 
 
@@ -535,6 +535,7 @@ if(options.onReady && options.callBackName ) {
     var waitFor = function() {
         var res;
         if( res = ls.getItem(myId) ) {
+            ls.removeItem( myId );
             later().removeFrameFn( waitFor );
             options.onReady( JSON.parse( res ) );
         }
@@ -1566,7 +1567,7 @@ _framers.push(fn);
 
 
 ```javascript
-
+// --- let's not ---
 ```
 
 ### <a name="later_removeFrameFn"></a>later::removeFrameFn(fn)
@@ -1622,7 +1623,7 @@ The class has following internal singleton variables:
 ```javascript
 
 if(_db) return;
-// In the following line, you should include the prefixes of implementations you want to test.
+// if you want experimental support, enable browser based prefixes
 _db = window.indexedDB; //  || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 
 _initDone = true;
@@ -1640,14 +1641,11 @@ _dbList = _localDB( "sys.db", {
 
 
 ```javascript
-// console.log("Clear databases called ");
 
 _dbList.then( function() {
   var dbs = _dbList.table("databases");
-  // console.log(" --- reading --- ");
   dbs.forEach( function(data, cursor) {
      if(fn(data)) {
-         // console.log("Trying to delete ", data.name);
          _db.deleteDatabase(data.name);
          cursor.delete();
      }       
@@ -1656,31 +1654,11 @@ _dbList.then( function() {
 })
 ```
 
-### <a name="_localDB_createTable"></a>_localDB::createTable(name, options)
-
-
-```javascript
-
-var objectStore = this._db.createObjectStore(name, options);
-
-return this.table( name );
-
-
-```
-
 ### <a name="_localDB_getDB"></a>_localDB::getDB(t)
 
 
 ```javascript
 return this._db;
-```
-
-### <a name="_localDB_getStore"></a>_localDB::getStore(store_name, mode)
-
-
-```javascript
-var tx = this._db.transaction(store_name, mode);
-return tx.objectStore(store_name);
 ```
 
 ### _localDB::constructor( dbName, options )
@@ -1723,6 +1701,16 @@ request.onupgradeneeded = function (event) {
                 var opts = options.tables[n];
                 // Create another object store called "names" with the autoIncrement flag set as true.    
                 var objStore = db.createObjectStore(n, opts.createOptions);
+
+                if(opts.indexes) {
+                    for(var iName in opts.indexes) {
+                        if(opts.indexes.hasOwnProperty(iName)) {
+                            var iData = opts.indexes[iName];
+                            objStore.createIndex(iName, iName, iData);
+                        }
+                    }
+                }
+                
             }
         }
     }
@@ -1798,6 +1786,60 @@ return t === Object(t);
 The class has following internal singleton variables:
         
         
+### <a name="dbTable__cursorAction"></a>dbTable::_cursorAction(mode, usingIndex, actionFn)
+
+
+```javascript
+
+var prom = _promise();
+
+var trans = this._db.transaction(this._table,  mode);
+var store = trans.objectStore(this._table);
+var cursorRequest;
+
+if(usingIndex) {
+
+    var singleKeyRange, indexName;
+    
+    // BUG or FEATURE: currently accepts only one key like
+    // { folderName : "data" };
+    for(var n in usingIndex) {
+        if(usingIndex.hasOwnProperty(n)) {
+             indexName = n; 
+             singleKeyRange = IDBKeyRange.only(usingIndex[n]);
+        }
+    }
+    
+    if(indexName) {
+        var index = store.index(indexName); // open using the index only
+        cursorRequest = index.openCursor(singleKeyRange);
+    } else {
+        prom.reject("invalid index key");
+        return;
+    }
+} else {
+    cursorRequest = store.openCursor();
+}
+
+trans.oncomplete = function(evt) {  
+    prom.resolve(true);
+};
+
+cursorRequest.onerror = function(error) {
+    console.log(error);
+};
+
+cursorRequest.onsuccess = function(evt) {                    
+    var cursor = evt.target.result;
+    if (cursor) {
+        actionFn(cursor);
+        cursor.continue();
+    }
+};
+
+return prom;
+```
+
 ### <a name="dbTable_addRows"></a>dbTable::addRows(rows)
 
 
@@ -1864,32 +1906,14 @@ return prom;
 
 ```
 
-### <a name="dbTable_forEach"></a>dbTable::forEach(fn)
+### <a name="dbTable_forEach"></a>dbTable::forEach(fn, usingIndex)
 
 
 ```javascript
 
-var trans = this._db.transaction(this._table, "readwrite");
-var store = trans.objectStore(this._table);
-var items = [];
-
-trans.oncomplete = function(evt) {  
-    
-};
-
-var cursorRequest = store.openCursor();
-
-cursorRequest.onerror = function(error) {
-    console.log(error);
-};
-
-cursorRequest.onsuccess = function(evt) {                    
-    var cursor = evt.target.result;
-    if (cursor) {
-        fn(cursor.value, cursor);
-        cursor.continue();
-    }
-};
+return this._cursorAction("readonly", usingIndex, function(cursor) {
+   fn(cursor.value, cursor);
+});
 
 ```
 
@@ -1915,36 +1939,22 @@ request.onsuccess = function(event) {
 return prom;
 ```
 
-### <a name="dbTable_getAll"></a>dbTable::getAll(t)
+### <a name="dbTable_getAll"></a>dbTable::getAll(usingIndex)
 
 
 ```javascript
 
-var prom = _promise();
+var items = [],
+    me = this;
 
-var trans = this._db.transaction(this._table, "readonly");
-var store = trans.objectStore(this._table);
-var items = [];
-
-trans.oncomplete = function(evt) {  
-    prom.resolve(items);
-};
-
-var cursorRequest = store.openCursor();
-
-cursorRequest.onerror = function(error) {
-    console.log(error);
-};
-
-cursorRequest.onsuccess = function(evt) {                    
-    var cursor = evt.target.result;
-    if (cursor) {
-        items.push(cursor.value);
-        cursor.continue();
-    }
-};
-
-return prom;
+return _promise(
+        function(result, fail) {
+            me._cursorAction("readonly", usingIndex, function(cursor) {
+               items.push(cursor.value); 
+            }).then( function() {
+                result(items);
+            }).fail(fail);
+        });
 
 ```
 
@@ -1957,37 +1967,41 @@ this._table = tableName;
 
 ```
         
-### <a name="dbTable_readAndDelete"></a>dbTable::readAndDelete(t)
+### <a name="dbTable_readAndDelete"></a>dbTable::readAndDelete(usingIndex)
 
 
 ```javascript
+var items = [],
+    me = this;
 
-var prom = _promise();
+return _promise(
+        function(result, fail) {
+            me._cursorAction("readwrite", usingIndex, function(cursor) {
+               items.push(cursor.value); 
+               cursor.delete(); // remove the key and continue... 
+            }).then( function() {
+                result(items);
+            }).fail(fail);
+        });
 
-var trans = this._db.transaction(this._table, "readwrite");
-var store = trans.objectStore(this._table);
-var items = [];
+```
 
-trans.oncomplete = function(evt) {  
-    prom.resolve(items);
-};
+### <a name="dbTable_remove"></a>dbTable::remove(usingIndex)
+`usingIndex` optional : { keyName : valueString}
+ 
 
-var cursorRequest = store.openCursor();
 
-cursorRequest.onerror = function(error) {
-    console.log(error);
-};
+```javascript
+var me = this;
 
-cursorRequest.onsuccess = function(evt) {                    
-    var cursor = evt.target.result;
-    if (cursor) {
-        items.push(cursor.value);
-        cursor.delete(); // remove the key and continue...
-        cursor.continue();
-    }
-};
-
-return prom;
+return _promise(
+        function(result, fail) {
+            me._cursorAction("readwrite", usingIndex, function(cursor) {
+               cursor.delete(); // remove the key and continue... 
+            }).then( function() {
+                result(true);
+            }).fail(fail);
+        });
 
 ```
 
@@ -2474,7 +2488,7 @@ _framers.push(fn);
 
 
 ```javascript
-
+// --- let's not ---
 ```
 
 ### <a name="later_removeFrameFn"></a>later::removeFrameFn(fn)
